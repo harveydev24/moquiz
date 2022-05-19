@@ -1,1 +1,765 @@
-[{"model": "movie_quizzes.actor", "pk": 1, "fields": {"name": "·Î¹öÆ® ´Ù¿ì ÁÖ´Ï¾î"}}, {"model": "movie_quizzes.actor", "pk": 2, "fields": {"name": "È²Á¤¹Î"}}, {"model": "movie_quizzes.actor", "pk": 3, "fields": {"name": "À¯¾ÆÀÎ"}}, {"model": "movie_quizzes.actor", "pk": 4, "fields": {"name": "¿øºó"}}, {"model": "movie_quizzes.actor", "pk": 5, "fields": {"name": "Àåµ¿°Ç"}}, {"model": "movie_quizzes.actor", "pk": 6, "fields": {"name": "±èÇý¼ö"}}, {"model": "movie_quizzes.actor", "pk": 7, "fields": {"name": "Á¶½Â¿ì"}}, {"model": "movie_quizzes.actor", "pk": 8, "fields": {"name": "À¯ÇØÁø"}}, {"model": "movie_quizzes.actor", "pk": 9, "fields": {"name": "ÃÖ¹Î½Ä"}}, {"model": "movie_quizzes.actor", "pk": 10, "fields": {"name": "ÇÏÁ¤¿ì"}}, {"model": "movie_quizzes.actor", "pk": 11, "fields": {"name": "Á¶Áø¿õ"}}, {"model": "movie_quizzes.actor", "pk": 12, "fields": {"name": "¸¶µ¿¼®"}}, {"model": "movie_quizzes.actor", "pk": 13, "fields": {"name": "ÀÌº´Çå"}}, {"model": "movie_quizzes.actor", "pk": 14, "fields": {"name": "ÀÌÁ¤Àç"}}, {"model": "movie_quizzes.actor", "pk": 15, "fields": {"name": "¹Ú¼º¿õ"}}, {"model": "movie_quizzes.actor", "pk": 16, "fields": {"name": "·ù½Â¹ü"}}, {"model": "movie_quizzes.actor", "pk": 17, "fields": {"name": "½Å¹Î¾Æ"}}, {"model": "movie_quizzes.actor", "pk": 18, "fields": {"name": "°ûµµ¿ø"}}, {"model": "movie_quizzes.actor", "pk": 19, "fields": {"name": "·ù½Â·æ"}}, {"model": "movie_quizzes.actor", "pk": 20, "fields": {"name": "¼Û°­È£"}}, {"model": "movie_quizzes.actor", "pk": 21, "fields": {"name": "À¯ÁöÅÂ"}}, {"model": "movie_quizzes.actor", "pk": 22, "fields": {"name": "±è·¡¿ø"}}, {"model": "movie_quizzes.actor", "pk": 23, "fields": {"name": "ÀÌ¿µ¾Ö"}}, {"model": "movie_quizzes.movie", "pk": 1, "fields": {"title": "¾ÆÀÌ¾ð¸Ç", "title_initial": "¤·¤·¤·¤±", "actors": [1]}}, {"model": "movie_quizzes.movie", "pk": 2, "fields": {"title": "º£Å×¶û", "title_initial": "¤²¤¼¤©", "actors": [2, 3]}}, {"model": "movie_quizzes.movie", "pk": 3, "fields": {"title": "¾ÆÀú¾¾", "title_initial": "¤·¤¸¤¶", "actors": [4]}}, {"model": "movie_quizzes.movie", "pk": 4, "fields": {"title": "Ä£±¸", "title_initial": "¤º¤¡", "actors": [5]}}, {"model": "movie_quizzes.movie", "pk": 5, "fields": {"title": "Å¸Â¥", "title_initial": "¤¼¤¹", "actors": [6, 7, 8]}}, {"model": "movie_quizzes.movie", "pk": 6, "fields": {"title": "¹üÁË¿ÍÀÇ ÀüÀï", "title_initial": "¤²¤¸¤·¤· ¤¸¤¸", "actors": [9, 10, 11, 12]}}, {"model": "movie_quizzes.movie", "pk": 7, "fields": {"title": "³»ºÎÀÚµé", "title_initial": "¤¤¤²¤¸¤§", "actors": [7, 13]}}, {"model": "movie_quizzes.movie", "pk": 8, "fields": {"title": "°ü»ó", "title_initial": "¤¡¤µ", "actors": [14]}}, {"model": "movie_quizzes.movie", "pk": 9, "fields": {"title": "½Å¼¼°è", "title_initial": "¤µ¤µ¤¡", "actors": [2, 9, 14, 15]}}, {"model": "movie_quizzes.movie", "pk": 10, "fields": {"title": "¸»¾ÆÅæ", "title_initial": "¤±¤·¤¼", "actors": [7]}}, {"model": "movie_quizzes.movie", "pk": 11, "fields": {"title": "ºÎ´ç°Å·¡", "title_initial": "¤²¤§¤¡¤©", "actors": [2]}}, {"model": "movie_quizzes.movie", "pk": 12, "fields": {"title": "´ÞÄÞÇÑ ÀÎ»ý", "title_initial": "¤§¤»¤¾ ¤·¤µ", "actors": [13, 17]}}, {"model": "movie_quizzes.movie", "pk": 13, "fields": {"title": "°î¼º", "title_initial": "¤¡¤µ", "actors": [2]}}, {"model": "movie_quizzes.movie", "pk": 14, "fields": {"title": "±ØÇÑÁ÷¾÷", "title_initial": "¤¡¤¾¤¸¤·", "actors": [19]}}, {"model": "movie_quizzes.movie", "pk": 15, "fields": {"title": "»ìÀÎÀÇ Ãß¾ï", "title_initial": "¤µ¤·¤· ¤º¤·", "actors": [20]}}, {"model": "movie_quizzes.movie", "pk": 16, "fields": {"title": "¿Ãµåº¸ÀÌ", "title_initial": "¤·¤§¤²¤·", "actors": [9, 21]}}, {"model": "movie_quizzes.movie", "pk": 17, "fields": {"title": "ÇØ¹Ù¶ó±â", "title_initial": "¤¾¤²¤©¤¡", "actors": [22]}}, {"model": "movie_quizzes.movie", "pk": 18, "fields": {"title": "º½³¯Àº °£´Ù", "title_initial": "¤²¤¤¤· ¤¡¤§", "actors": [23]}}, {"model": "movie_quizzes.movie_image", "pk": 1, "fields": {"movie": 2, "image_url": "https://pds.joins.com/news/component/htmlphoto_mmdata/201508/29/htm_20150829091350949.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 2, "fields": {"movie": 2, "image_url": "https://w.namu.la/s/1d6ed89b28e72ddd439b36d69582ecd36f6461094c1cf8de9f92169c6beb22039647293e8c30725dd6093c50da02c48403ceaddf617b45962dcfad60bec33717a78a20310f1ce162e6b4f86ed172ce6fd580fb3e818c9261b421d8907960cae4d7104f0411f6123bc36424a7afe96eb0"}}, {"model": "movie_quizzes.movie_image", "pk": 3, "fields": {"movie": 2, "image_url": "https://w.namu.la/s/69c539b761481d8ff36ee8f47c6dfa0677c526114558ad5f0d94abefd5ed6d1f4c4f0cd61514384c40b0862cce8d8b2103db7300768b177dffa5ad806be2479910fa591389ea32833e6904a5fa7c71dd1a128e880382a5e8402774d064410acb42f3579c5b0c8c10a85eb7709c4d104c"}}, {"model": "movie_quizzes.movie_image", "pk": 4, "fields": {"movie": 3, "image_url": "http://db.kookje.co.kr/news2000/photo/2018/0201/L20180201.99099000012i1.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 5, "fields": {"movie": 3, "image_url": "https://w.namu.la/s/3b8e38e596e65404e93e2fc42747f5c60896f4640689d72f7e4aab86260d418c7ed92f2c981b8909f65d674331fbf82b7ccf35e2f369a99358ca63866870564d18c8a65bc6319e6da11eb843d301ee2dd447a0e03fe24b1da00c50378d63fd561c69dbcb1abec73380fee487b22526f5"}}, {"model": "movie_quizzes.movie_image", "pk": 6, "fields": {"movie": 3, "image_url": "https://images.chosun.com/resizer/6w8SBDDpnXYhooM6sL6PXXNFafE=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/2ZFUNG7PERGLXIJXVWAXIMKGKI.JPG"}}, {"model": "movie_quizzes.movie_image", "pk": 7, "fields": {"movie": 3, "image_url": "http://storage.enuri.info/pic_upload/knowbox/mobile_img/202104/2021042508104485184.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 8, "fields": {"movie": 3, "image_url": "https://imgbntnews.hankyung.com/bntdata/images/photo/201008/36b199f2a74a55701556e64197a26cdc.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 9, "fields": {"movie": 3, "image_url": "https://t1.daumcdn.net/cfile/tistory/12679C184CF91CCD37"}}, {"model": "movie_quizzes.movie_image", "pk": 10, "fields": {"movie": 3, "image_url": "https://t1.daumcdn.net/cfile/tistory/166157194CF91D1E01"}}, {"model": "movie_quizzes.movie_image", "pk": 11, "fields": {"movie": 3, "image_url": "https://t1.daumcdn.net/cfile/tistory/205B2B194CF91D6E06"}}, {"model": "movie_quizzes.movie_image", "pk": 12, "fields": {"movie": 2, "image_url": "https://cdn.dailyimpact.co.kr/news/photo/201712/44057_5365_1438.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 13, "fields": {"movie": 2, "image_url": "https://cdn.econovill.com/news/photo/201508/259951_56386_1013.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 14, "fields": {"movie": 2, "image_url": "https://image.kmib.co.kr/online_image/2015/0817/201508171816_61180009759415_1.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 15, "fields": {"movie": 2, "image_url": "https://images.chosun.com/resizer/UGxoDUilgYzMLj1I44tXeWuxxlc=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/VH7UALUKGMHRZ2V75FTJDCCBPE.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 16, "fields": {"movie": 2, "image_url": "https://dispatch.cdnser.be/wp-content/uploads/2015/08/20150821230608_zzc.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 17, "fields": {"movie": 7, "image_url": "https://ohfun.net/contents/article/images/2016/0919/1474270983560337.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 18, "fields": {"movie": 7, "image_url": "http://www.sisaweek.com/news/photo/201704/90449_70645_2149.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 19, "fields": {"movie": 7, "image_url": "https://media.timeout.com/images/102929195/750/422/image.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 20, "fields": {"movie": 7, "image_url": "https://img.hankyung.com/photo/201511/01.10800204.1.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 21, "fields": {"movie": 7, "image_url": "https://file2.nocutnews.co.kr/newsroom/image/2015/12/28/20151228155111119084.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 22, "fields": {"movie": 7, "image_url": "https://file.mk.co.kr/mkde/N0/2021/12/20211224_5050500_1640325602.jpeg"}}, {"model": "movie_quizzes.movie_image", "pk": 23, "fields": {"movie": 7, "image_url": "http://file3.instiz.net/data/file3/2018/08/17/b/7/3/b73d88235b7004a34838e1837acbe419.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 24, "fields": {"movie": 7, "image_url": "http://minzokilbo.com/wp/wp-content/uploads/2021/09/2110_%E1%84%92%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%A2%E1%86%BC%E1%84%8B%E1%85%B4%E1%84%80%E1%85%B5%E1%84%80%E1%85%AA%E1%86%AB%E1%84%8E%E1%85%A1_%E1%84%8B%E1%85%B0%E1%86%B8_%E1%84%83%E1%85%AE%E1%84%8D%E1%85%A9%E1%86%A8_51-1-e1633079250484.png"}}, {"model": "movie_quizzes.movie_image", "pk": 25, "fields": {"movie": 11, "image_url": "https://img.huffingtonpost.com/asset/5da004b92100004207344134.png?ops=scalefit_630_noupscale"}}, {"model": "movie_quizzes.movie_image", "pk": 26, "fields": {"movie": 11, "image_url": "http://ojsfile.ohmynews.com/STD_IMG_FILE/2011/0124/IE001273477_STD.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 27, "fields": {"movie": 11, "image_url": "https://cdn.topstarnews.net/news/photo/201808/469196_124057_3536.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 28, "fields": {"movie": 11, "image_url": "http://newsimg.hankookilbo.com/2014/11/06/201411061719779265_1.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 29, "fields": {"movie": 11, "image_url": "https://t1.daumcdn.net/cfile/blog/1812760C4CC63A6091"}}, {"model": "movie_quizzes.movie_image", "pk": 30, "fields": {"movie": 11, "image_url": "https://t1.daumcdn.net/cfile/blog/2012760C4CC63A6192"}}, {"model": "movie_quizzes.movie_image", "pk": 31, "fields": {"movie": 11, "image_url": "https://www.economytalk.kr/news/photo/201411/126463_3655_1015.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 32, "fields": {"movie": 11, "image_url": "http://www.mediaus.co.kr/news/photo/201011/14406_25652_1556.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 33, "fields": {"movie": 9, "image_url": "https://cdn.topstarnews.net/news/photo/201909/674018_381199_1711.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 34, "fields": {"movie": 9, "image_url": "http://image.yes24.com/images/chyes24/b/a/5/a/ba5ac01722f93abd5839b5d92f5a104c.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 35, "fields": {"movie": 9, "image_url": "http://image.yes24.com/images/chyes24/1/2/6/3/1263776f03ebb192b38eb3594c07e0d3.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 36, "fields": {"movie": 9, "image_url": "http://image.yes24.com/images/chyes24/c/d/5/1/cd515541f56dea9b581b1c2192238b4b.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 37, "fields": {"movie": 9, "image_url": "https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202105/25/feelthemovie/20210525085913085ynpp.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 38, "fields": {"movie": 9, "image_url": "https://img1.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202105/25/feelthemovie/20210525085915579zite.png"}}, {"model": "movie_quizzes.movie_image", "pk": 39, "fields": {"movie": 9, "image_url": "https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202105/25/feelthemovie/20210525085921109lgtp.jpg"}}, {"model": "movie_quizzes.movie_image", "pk": 40, "fields": {"movie": 9, "image_url": "http://www.newsa.co.kr/news/photo/201302/53913_40840_0000.jpg"}}, {"model": "movie_quizzes.famous_line", "pk": 1, "fields": {"movie": 1, "line": "¾ÆÀÓ ¾ÆÀÌ¾ð¸Ç", "line_initial": "¤·¤· ¤·¤·¤·¤±"}}, {"model": "movie_quizzes.famous_line", "pk": 2, "fields": {"movie": 3, "line": "ÀÌ°Å ¹æÅº À¯¸®¾ß ÀÌ °³»õ³¢¾ß!", "line_initial": "¤·¤¡ ¤²¤¼ ¤·¤©¤· ¤· ¤¡¤µ¤¢¤·!"}}, {"model": "movie_quizzes.famous_line", "pk": 3, "fields": {"movie": 3, "line": "±ÝÀÌ»¡ »©°í ¸ðÁ¶¸® ¾Ã¾î¸Ô¾îÁÙ°Ô", "line_initial": "¤¡¤·¤³ ¤³¤¡ ¤±¤¸¤© ¤¶¤·¤±¤·¤¸¤¡"}}, {"model": "movie_quizzes.famous_line", "pk": 4, "fields": {"movie": 5, "line": "³ª ÀÌ´ë ³ª¿Â ¿©ÀÚ¾ß", "line_initial": "¤¤ ¤·¤§ ¤¤¤· ¤·¤¸¤·"}}, {"model": "movie_quizzes.famous_line", "pk": 5, "fields": {"movie": 4, "line": "³»°¡ ´Ï ½Ã´Ù¹Ù¸®°¡", "line_initial": "¤¤¤¡ ¤¤ ¤µ¤§¤²¤©¤¡"}}, {"model": "movie_quizzes.famous_line", "pk": 6, "fields": {"movie": 4, "line": "´Ï°¡ °¡¶ó ÇÏ¿ÍÀÌ", "line_initial": "¤¤¤¡ ¤¡¤© ¤¾¤·¤·"}}, {"model": "movie_quizzes.famous_line", "pk": 7, "fields": {"movie": 4, "line": "°í¸¶ÇØ¶ó ¸¶ÀÌ ¹«µûÀÌ°¡", "line_initial": "¤¡¤±¤¾¤© ¤±¤· ¤±¤¨¤·¤¡"}}, {"model": "movie_quizzes.famous_line", "pk": 8, "fields": {"movie": 5, "line": "µ¿ÀÛ ±×¸¸, ¹ØÀå»©±â³Ä?", "line_initial": "¤§¤¸ ¤¡¤±, ¤±¤¸¤³¤¡¤¤?"}}, {"model": "movie_quizzes.famous_line", "pk": 9, "fields": {"movie": 7, "line": "¸ðÈ÷¶Ç °¡¼­ ¸ôµðºê ÇÑ ÀÜ?", "line_initial": "¤±¤¾¤¨ ¤¡¤µ ¤±¤§¤² ¤¾ ¤¸?"}}, {"model": "movie_quizzes.famous_line", "pk": 10, "fields": {"movie": 8, "line": "³»°¡ ¿ÕÀÌ µÉ »óÀÎ°¡?", "line_initial": "¤¤¤¡ ¤·¤· ¤§ ¤µ¤·¤¡?"}}, {"model": "movie_quizzes.famous_line", "pk": 11, "fields": {"movie": 10, "line": "ÃÊ¿øÀÌ ´Ù¸®´Â ¹é¸¸ºÒÂ¥¸® ´Ù¸®", "line_initial": "¤º¤·¤· ¤§¤©¤¤ ¤²¤±¤²¤¹¤© ¤§¤©"}}, {"model": "movie_quizzes.famous_line", "pk": 12, "fields": {"movie": 10, "line": "¿ì¸® ¾ÆÀÌ¿¡°Ô´Â Àå¾Ö°¡ ÀÖ¾î¿ä", "line_initial": "¤·¤© ¤·¤·¤·¤¡¤¤ ¤¸¤·¤¡ ¤·¤·¤·"}}, {"model": "movie_quizzes.famous_line", "pk": 13, "fields": {"movie": 2, "line": "¾îÀÌ°¡ ¾ø³×", "line_initial": "¤·¤·¤¡ ¤·¤¤"}}, {"model": "movie_quizzes.famous_line", "pk": 14, "fields": {"movie": 9, "line": "µå·ç¿Í µå·ç¿Í", "line_initial": "¤§¤©¤· ¤§¤©¤·"}}, {"model": "movie_quizzes.famous_line", "pk": 15, "fields": {"movie": 11, "line": "È£ÀÇ°¡ °è¼ÓµÇ¸é ±×°Ô ±Ç¸®ÀÎÁÙ ¾Ë¾Æ", "line_initial": "¤¾¤·¤¡ ¤¡¤µ¤§¤± ¤¡¤¡ ¤¡¤©¤·¤¸ ¤·¤·"}}, {"model": "movie_quizzes.famous_line", "pk": 16, "fields": {"movie": 12, "line": "³Í ³ª¿¡°Ô ¸ð¿å°¨À» Áá¾î", "line_initial": "¤¤ ¤¤¤·¤¡ ¤±¤·¤¡¤· ¤¸¤·"}}, {"model": "movie_quizzes.famous_line", "pk": 17, "fields": {"movie": 13, "line": "¹½ÀÌ ÁßÇåµð", "line_initial": "¤±¤· ¤¸¤¾¤§"}}, {"model": "movie_quizzes.famous_line", "pk": 18, "fields": {"movie": 14, "line": "Áö±Ý±îÁö ÀÌ·± ¸ÀÀº ¾ø¾ú´Ù ÀÌ°ÍÀº °¥ºñÀÎ°¡ Åë´ßÀÎ°¡", "line_initial": "¤¸¤¡¤¢¤¸ ¤·¤© ¤±¤· ¤·¤·¤§ ¤·¤¡¤· ¤¡¤²¤·¤¡ ¤¼¤§¤·¤¡"}}, {"model": "movie_quizzes.famous_line", "pk": 19, "fields": {"movie": 5, "line": "µ¿ÀÛ ±×¸¸ ¹ØÀå»©±â³Ä?", "line_initial": "¤§¤¸ ¤¡¤± ¤±¤¸¤³¤¡¤¤?"}}, {"model": "movie_quizzes.famous_line", "pk": 20, "fields": {"movie": 4, "line": "´À±× ¾ÆºÎÁö ¹¹ÇÏ½Ã³ë?", "line_initial": "¤¤¤¡ ¤·¤²¤¸ ¤±¤¾¤µ¤¤?"}}, {"model": "movie_quizzes.famous_line", "pk": 21, "fields": {"movie": 5, "line": "¹¯°í ´õºí·Î °¡!", "line_initial": "¤±¤¡ ¤§¤²¤© ¤¡!"}}, {"model": "movie_quizzes.famous_line", "pk": 22, "fields": {"movie": 6, "line": "³»°¡ ÀÎ¸¶ ´À±× ¼­ÀåÀÌ¶û ÀÎ¸¶ ¾îÀú²²µµ °°ÀÌ ¹ä ¹¬°í! ½Î¿ì³ªµµ °°ÀÌ °¡°í!", "line_initial": "¤¤¤¡ ¤·¤± ¤¤¤¡ ¤µ¤¸¤·¤© ¤·¤± ¤·¤¸¤¢¤§ ¤¡¤· ¤² ¤±¤¡! ¤¶¤·¤¤¤§ ¤¡¤· ¤¡¤¡!"}}, {"model": "movie_quizzes.famous_line", "pk": 23, "fields": {"movie": 15, "line": "¹äÀº ¸Ô°í ´Ù´Ï³Ä?", "line_initial": "¤²¤· ¤±¤¡ ¤§¤¤¤¤?"}}, {"model": "movie_quizzes.famous_line", "pk": 24, "fields": {"movie": 16, "line": "´©±¸³Ä ³Í?", "line_initial": "¤¤¤¡¤¤ ¤¤?"}}, {"model": "movie_quizzes.famous_line", "pk": 25, "fields": {"movie": 5, "line": "½Î´ÃÇÏ´Ù °¡½¿¿¡ ºñ¼ö°¡ ³¯¾Æ¿Í ²ÉÈù´Ù.", "line_initial": "¤¶¤¤¤¾¤§ ¤¡¤µ¤· ¤²¤µ¤¡ ¤¤¤·¤· ¤¢¤¾¤§"}}, {"model": "movie_quizzes.famous_line", "pk": 26, "fields": {"movie": 5, "line": "³»°¡ ºù´Ù¸® ÇÖ¹ÙÁö·Î º¸ÀÌ³Ä?", "line_initial": "¤¤¤¡ ¤²¤§¤© ¤¾¤²¤¸¤© ¤²¤·¤¤?"}}, {"model": "movie_quizzes.famous_line", "pk": 27, "fields": {"movie": 9, "line": "Á×±â µü ÁÁÀº ³¯¾¾³×", "line_initial": "¤¸¤¡ ¤¨ ¤¸¤· ¤¤¤¶¤¤"}}, {"model": "movie_quizzes.famous_line", "pk": 28, "fields": {"movie": 9, "line": "»ì·Á´Â µå¸±°Ô", "line_initial": "¤µ¤©¤¤ ¤§¤©¤¡"}}, {"model": "movie_quizzes.famous_line", "pk": 29, "fields": {"movie": 6, "line": "»ì¾ÆÀÖ³×", "line_initial": "¤µ¤·¤·¤¤"}}, {"model": "movie_quizzes.famous_line", "pk": 30, "fields": {"movie": 3, "line": "¾ÆÁ÷ ÇÑ ¹ß ³²¾Ò´Ù", "line_initial": "¤·¤¸ ¤¾ ¤² ¤¤¤·¤§"}}, {"model": "movie_quizzes.famous_line", "pk": 31, "fields": {"movie": 17, "line": "²À ±×·¸°Ô ´Ù °¡Á® °¡¾ß¸¸ ¼ÓÀÌ ÈÄ·ÃÇß³Ä!", "line_initial": "¤¢ ¤¡¤©¤¡ ¤§ ¤¡¤¸ ¤¡¤·¤± ¤µ¤· ¤¾¤©¤¾¤¤!"}}, {"model": "movie_quizzes.famous_line", "pk": 32, "fields": {"movie": 7, "line": "¿ä½ä°í", "line_initial": "¤·¤¶¤¡"}}, {"model": "movie_quizzes.famous_line", "pk": 33, "fields": {"movie": 3, "line": "³»ÀÏ¸¸ »ç´Â ³ðÀº ¿À´Ã¸¸ »ç´Â ³ðÇÑÅ× Á×´Â´Ù", "line_initial": "¤¤¤·¤± ¤µ¤¤ ¤¤¤· ¤·¤¤¤± ¤µ¤¤ ¤¤¤¾¤¼ ¤¸¤¤¤§"}}, {"model": "movie_quizzes.famous_line", "pk": 34, "fields": {"movie": 18, "line": "¶ó¸é ¸ÔÀ»·¡¿ä?", "line_initial": "¤©¤± ¤±¤·¤©¤·?"}}]
+[
+  {
+    "model": "movie_quizzes.actor",
+    "pk": 1,
+    "fields": { "name": "ï¿½Î¹ï¿½Æ® ï¿½Ù¿ï¿½ ï¿½Ö´Ï¾ï¿½" }
+  },
+  { "model": "movie_quizzes.actor", "pk": 2, "fields": { "name": "È²ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 3, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 4, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 5, "fields": { "name": "ï¿½åµ¿ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 6, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 7, "fields": { "name": "ï¿½ï¿½ï¿½Â¿ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 8, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 9, "fields": { "name": "ï¿½Ö¹Î½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 10, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 11, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 12, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 13, "fields": { "name": "ï¿½Ìºï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 14, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 15, "fields": { "name": "ï¿½Ú¼ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 16, "fields": { "name": "ï¿½ï¿½ï¿½Â¹ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 17, "fields": { "name": "ï¿½Å¹Î¾ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 18, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 19, "fields": { "name": "ï¿½ï¿½ï¿½Â·ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 20, "fields": { "name": "ï¿½Û°ï¿½È£" } },
+  { "model": "movie_quizzes.actor", "pk": 21, "fields": { "name": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 22, "fields": { "name": "ï¿½è·¡ï¿½ï¿½" } },
+  { "model": "movie_quizzes.actor", "pk": 23, "fields": { "name": "ï¿½Ì¿ï¿½ï¿½ï¿½" } },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 1,
+    "fields": { "title": "ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "actors": [1] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 2,
+    "fields": { "title": "ï¿½ï¿½ï¿½×¶ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "actors": [2, 3] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 3,
+    "fields": { "title": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "actors": [4] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 4,
+    "fields": { "title": "Ä£ï¿½ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½", "actors": [5] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 5,
+    "fields": { "title": "Å¸Â¥", "title_initial": "ï¿½ï¿½ï¿½ï¿½", "actors": [6, 7, 8] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 6,
+    "fields": {
+      "title": "ï¿½ï¿½ï¿½Ë¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "actors": [9, 10, 11, 12]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 7,
+    "fields": {
+      "title": "ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "actors": [7, 13]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 8,
+    "fields": { "title": "ï¿½ï¿½ï¿½ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½", "actors": [14] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 9,
+    "fields": {
+      "title": "ï¿½Å¼ï¿½ï¿½ï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "actors": [2, 9, 14, 15]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 10,
+    "fields": { "title": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "actors": [7] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 11,
+    "fields": { "title": "ï¿½Î´ï¿½Å·ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "actors": [2] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 12,
+    "fields": {
+      "title": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î»ï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "actors": [13, 17]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 13,
+    "fields": { "title": "ï¿½î¼º", "title_initial": "ï¿½ï¿½ï¿½ï¿½", "actors": [2] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 14,
+    "fields": {
+      "title": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "actors": [19]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 15,
+    "fields": {
+      "title": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß¾ï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "actors": [20]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 16,
+    "fields": {
+      "title": "ï¿½Ãµåº¸ï¿½ï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "actors": [9, 21]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 17,
+    "fields": { "title": "ï¿½Ø¹Ù¶ï¿½ï¿½", "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "actors": [22] }
+  },
+  {
+    "model": "movie_quizzes.movie",
+    "pk": 18,
+    "fields": {
+      "title": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "title_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "actors": [23]
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 1,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://pds.joins.com/news/component/htmlphoto_mmdata/201508/29/htm_20150829091350949.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 2,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://w.namu.la/s/1d6ed89b28e72ddd439b36d69582ecd36f6461094c1cf8de9f92169c6beb22039647293e8c30725dd6093c50da02c48403ceaddf617b45962dcfad60bec33717a78a20310f1ce162e6b4f86ed172ce6fd580fb3e818c9261b421d8907960cae4d7104f0411f6123bc36424a7afe96eb0"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 3,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://w.namu.la/s/69c539b761481d8ff36ee8f47c6dfa0677c526114558ad5f0d94abefd5ed6d1f4c4f0cd61514384c40b0862cce8d8b2103db7300768b177dffa5ad806be2479910fa591389ea32833e6904a5fa7c71dd1a128e880382a5e8402774d064410acb42f3579c5b0c8c10a85eb7709c4d104c"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 4,
+    "fields": {
+      "movie": 3,
+      "image_url": "http://db.kookje.co.kr/news2000/photo/2018/0201/L20180201.99099000012i1.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 5,
+    "fields": {
+      "movie": 3,
+      "image_url": "https://w.namu.la/s/3b8e38e596e65404e93e2fc42747f5c60896f4640689d72f7e4aab86260d418c7ed92f2c981b8909f65d674331fbf82b7ccf35e2f369a99358ca63866870564d18c8a65bc6319e6da11eb843d301ee2dd447a0e03fe24b1da00c50378d63fd561c69dbcb1abec73380fee487b22526f5"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 6,
+    "fields": {
+      "movie": 3,
+      "image_url": "https://images.chosun.com/resizer/6w8SBDDpnXYhooM6sL6PXXNFafE=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/2ZFUNG7PERGLXIJXVWAXIMKGKI.JPG"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 7,
+    "fields": {
+      "movie": 3,
+      "image_url": "http://storage.enuri.info/pic_upload/knowbox/mobile_img/202104/2021042508104485184.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 8,
+    "fields": {
+      "movie": 3,
+      "image_url": "https://imgbntnews.hankyung.com/bntdata/images/photo/201008/36b199f2a74a55701556e64197a26cdc.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 9,
+    "fields": {
+      "movie": 3,
+      "image_url": "https://t1.daumcdn.net/cfile/tistory/12679C184CF91CCD37"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 10,
+    "fields": {
+      "movie": 3,
+      "image_url": "https://t1.daumcdn.net/cfile/tistory/166157194CF91D1E01"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 11,
+    "fields": {
+      "movie": 3,
+      "image_url": "https://t1.daumcdn.net/cfile/tistory/205B2B194CF91D6E06"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 12,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://cdn.dailyimpact.co.kr/news/photo/201712/44057_5365_1438.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 13,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://cdn.econovill.com/news/photo/201508/259951_56386_1013.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 14,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://image.kmib.co.kr/online_image/2015/0817/201508171816_61180009759415_1.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 15,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://images.chosun.com/resizer/UGxoDUilgYzMLj1I44tXeWuxxlc=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/VH7UALUKGMHRZ2V75FTJDCCBPE.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 16,
+    "fields": {
+      "movie": 2,
+      "image_url": "https://dispatch.cdnser.be/wp-content/uploads/2015/08/20150821230608_zzc.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 17,
+    "fields": {
+      "movie": 7,
+      "image_url": "https://ohfun.net/contents/article/images/2016/0919/1474270983560337.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 18,
+    "fields": {
+      "movie": 7,
+      "image_url": "http://www.sisaweek.com/news/photo/201704/90449_70645_2149.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 19,
+    "fields": {
+      "movie": 7,
+      "image_url": "https://media.timeout.com/images/102929195/750/422/image.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 20,
+    "fields": {
+      "movie": 7,
+      "image_url": "https://img.hankyung.com/photo/201511/01.10800204.1.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 21,
+    "fields": {
+      "movie": 7,
+      "image_url": "https://file2.nocutnews.co.kr/newsroom/image/2015/12/28/20151228155111119084.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 22,
+    "fields": {
+      "movie": 7,
+      "image_url": "https://file.mk.co.kr/mkde/N0/2021/12/20211224_5050500_1640325602.jpeg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 23,
+    "fields": {
+      "movie": 7,
+      "image_url": "http://file3.instiz.net/data/file3/2018/08/17/b/7/3/b73d88235b7004a34838e1837acbe419.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 24,
+    "fields": {
+      "movie": 7,
+      "image_url": "http://minzokilbo.com/wp/wp-content/uploads/2021/09/2110_%E1%84%92%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%A2%E1%86%BC%E1%84%8B%E1%85%B4%E1%84%80%E1%85%B5%E1%84%80%E1%85%AA%E1%86%AB%E1%84%8E%E1%85%A1_%E1%84%8B%E1%85%B0%E1%86%B8_%E1%84%83%E1%85%AE%E1%84%8D%E1%85%A9%E1%86%A8_51-1-e1633079250484.png"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 25,
+    "fields": {
+      "movie": 11,
+      "image_url": "https://img.huffingtonpost.com/asset/5da004b92100004207344134.png?ops=scalefit_630_noupscale"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 26,
+    "fields": {
+      "movie": 11,
+      "image_url": "http://ojsfile.ohmynews.com/STD_IMG_FILE/2011/0124/IE001273477_STD.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 27,
+    "fields": {
+      "movie": 11,
+      "image_url": "https://cdn.topstarnews.net/news/photo/201808/469196_124057_3536.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 28,
+    "fields": {
+      "movie": 11,
+      "image_url": "http://newsimg.hankookilbo.com/2014/11/06/201411061719779265_1.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 29,
+    "fields": {
+      "movie": 11,
+      "image_url": "https://t1.daumcdn.net/cfile/blog/1812760C4CC63A6091"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 30,
+    "fields": {
+      "movie": 11,
+      "image_url": "https://t1.daumcdn.net/cfile/blog/2012760C4CC63A6192"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 31,
+    "fields": {
+      "movie": 11,
+      "image_url": "https://www.economytalk.kr/news/photo/201411/126463_3655_1015.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 32,
+    "fields": {
+      "movie": 11,
+      "image_url": "http://www.mediaus.co.kr/news/photo/201011/14406_25652_1556.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 33,
+    "fields": {
+      "movie": 9,
+      "image_url": "https://cdn.topstarnews.net/news/photo/201909/674018_381199_1711.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 34,
+    "fields": {
+      "movie": 9,
+      "image_url": "http://image.yes24.com/images/chyes24/b/a/5/a/ba5ac01722f93abd5839b5d92f5a104c.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 35,
+    "fields": {
+      "movie": 9,
+      "image_url": "http://image.yes24.com/images/chyes24/1/2/6/3/1263776f03ebb192b38eb3594c07e0d3.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 36,
+    "fields": {
+      "movie": 9,
+      "image_url": "http://image.yes24.com/images/chyes24/c/d/5/1/cd515541f56dea9b581b1c2192238b4b.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 37,
+    "fields": {
+      "movie": 9,
+      "image_url": "https://img3.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202105/25/feelthemovie/20210525085913085ynpp.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 38,
+    "fields": {
+      "movie": 9,
+      "image_url": "https://img1.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202105/25/feelthemovie/20210525085915579zite.png"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 39,
+    "fields": {
+      "movie": 9,
+      "image_url": "https://img4.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202105/25/feelthemovie/20210525085921109lgtp.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.movie_image",
+    "pk": 40,
+    "fields": {
+      "movie": 9,
+      "image_url": "http://www.newsa.co.kr/news/photo/201302/53913_40840_0000.jpg"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 1,
+    "fields": {
+      "movie": 1,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 2,
+    "fields": {
+      "movie": 3,
+      "line": "ï¿½Ì°ï¿½ ï¿½ï¿½Åº ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 3,
+    "fields": {
+      "movie": 3,
+      "line": "ï¿½ï¿½ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã¾ï¿½Ô¾ï¿½ï¿½Ù°ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 4,
+    "fields": {
+      "movie": 5,
+      "line": "ï¿½ï¿½ ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¾ï¿½",
+      "line_initial": "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 5,
+    "fields": {
+      "movie": 4,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ã´Ù¹Ù¸ï¿½ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 6,
+    "fields": {
+      "movie": 4,
+      "line": "ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¿ï¿½ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 7,
+    "fields": {
+      "movie": 4,
+      "line": "ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì°ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 8,
+    "fields": {
+      "movie": 5,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½, ï¿½ï¿½ï¿½å»©ï¿½ï¿½ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 9,
+    "fields": {
+      "movie": 7,
+      "line": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 10,
+    "fields": {
+      "movie": 8,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Î°ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 11,
+    "fields": {
+      "movie": 10,
+      "line": "ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½é¸¸ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½Ù¸ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 12,
+    "fields": {
+      "movie": 10,
+      "line": "ï¿½ì¸® ï¿½ï¿½ï¿½Ì¿ï¿½ï¿½Ô´ï¿½ ï¿½ï¿½Ö°ï¿½ ï¿½Ö¾ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 13,
+    "fields": { "movie": 2, "line": "ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½", "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 14,
+    "fields": {
+      "movie": 9,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 15,
+    "fields": {
+      "movie": 11,
+      "line": "È£ï¿½Ç°ï¿½ ï¿½ï¿½ÓµÇ¸ï¿½ ï¿½×°ï¿½ ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¾ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 16,
+    "fields": {
+      "movie": 12,
+      "line": "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½å°¨ï¿½ï¿½ ï¿½ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 17,
+    "fields": {
+      "movie": 13,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 18,
+    "fields": {
+      "movie": 14,
+      "line": "ï¿½ï¿½ï¿½Ý±ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½Î°ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 19,
+    "fields": {
+      "movie": 5,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½×¸ï¿½ ï¿½ï¿½ï¿½å»©ï¿½ï¿½ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 20,
+    "fields": {
+      "movie": 4,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½Æºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï½Ã³ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 21,
+    "fields": {
+      "movie": 5,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½!",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½!"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 22,
+    "fields": {
+      "movie": 6,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½! ï¿½Î¿ì³ªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 23,
+    "fields": {
+      "movie": 15,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½Ô°ï¿½ ï¿½Ù´Ï³ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 24,
+    "fields": {
+      "movie": 16,
+      "line": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 25,
+    "fields": {
+      "movie": 5,
+      "line": "ï¿½Î´ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 26,
+    "fields": {
+      "movie": 5,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½ ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì³ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 27,
+    "fields": {
+      "movie": 9,
+      "line": "ï¿½×±ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 28,
+    "fields": {
+      "movie": 9,
+      "line": "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½å¸±ï¿½ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 29,
+    "fields": { "movie": 6, "line": "ï¿½ï¿½ï¿½ï¿½Ö³ï¿½", "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 30,
+    "fields": {
+      "movie": 3,
+      "line": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ò´ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 31,
+    "fields": {
+      "movie": 17,
+      "line": "ï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä·ï¿½ï¿½ß³ï¿½!",
+      "line_initial": "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 32,
+    "fields": { "movie": 7, "line": "ï¿½ï¿½ï¿½ï¿½", "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 33,
+    "fields": {
+      "movie": 3,
+      "line": "ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¸ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×´Â´ï¿½",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"
+    }
+  },
+  {
+    "model": "movie_quizzes.famous_line",
+    "pk": 34,
+    "fields": {
+      "movie": 18,
+      "line": "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?",
+      "line_initial": "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?"
+    }
+  }
+]
