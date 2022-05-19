@@ -9,3 +9,5 @@ class User(AbstractUser):
     score = models.IntegerField(null=True)
     correct = models.IntegerField(null=True)
     wrong = models.IntegerField(null=True)
+    followings = models.ManyToManyField(
+        'self', symmetrical=False, related_name='followers')
