@@ -3,6 +3,7 @@ from django.db.models import Max
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework.status import *
 from .models import *
 
 import random
@@ -83,4 +84,4 @@ def quiz(request):
 
     random.shuffle(ret['quizzes'])
 
-    return Response(ret)
+    return Response(ret, status=HTTP_200_OK)

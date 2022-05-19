@@ -1,9 +1,9 @@
 from django.contrib.auth import get_user_model
-from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from rest_framework.status import *
 
 from .models import *
 from .serializers.article import ArticleSerializer
@@ -16,7 +16,7 @@ User = get_user_model()
 def index(request):
     articles = Article.objects.order_by('-pk')[:10]
     serializer = ArticleSerializer(articles, many=True)
-    return Response(serializer.data)
+    return Response(serializer.data, status=HTTP_200_OK)
 
 
 @api_view(['POST'])
@@ -28,28 +28,27 @@ def article_create(request):
     article.content = request.data['content']
 
     article.save()
-    return Response({'pk': article.pk})
+    return Response({'pk': article.pk}, status=HTTP_201_CREATED)
 
 
-@api_view(['GET', 'POST', 'DELETE'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def article(request, pk):
     article = get_object_or_404(Article, pk=pk)
 
     if request.method == 'GET':
         serializer = ArticleSerializer(article)
-        return Response(serializer.data)
+        return Response(serializer.data, status=HTTP_200_OK)
 
-    elif request.method == 'POST':
-
-        article.title = request.data['title']
-        article.content = request.data['content']
-        article.save()
-
-        return HttpResponse()
-
+    elif request.method == 'PUT':
+        if request.user == article.user:
+            article.title = request.data['title']
+            article.content = request.data['content']
+            article.save()
+            return Response(status=HTTP_200_OK)
+        return Response(status=HTTP_403_FORBIDDEN)
     elif request.method == 'DELETE':
         article.delete()
-        return HttpResponse()
+        return Response(status=HTTP_200_OK)
 
 
 @api_view(['POST'])
@@ -60,7 +59,7 @@ def article_like(request, pk):
         article.like_users.remove(user)
     else:
         article.like_users.add(user)
-    return HttpResponse()
+    return Response(status=HTTP_200_OK)
 
 
 @api_view(['POST'])
@@ -73,11 +72,11 @@ def comment_create(request, pk):
     comment.content = request.data['content']
 
     comment.save()
-    return HttpResponse()
+    return Response(status=HTTP_201_CREATED)
 
 
 @api_view(['DELETE'])
 def comment_delete(request, article_pk, comment_pk):
     comment = get_object_or_404(Comment, pk=comment_pk)
     comment.delete()
-    return HttpResponse()
+    return Response(status=HTTP_200_OK)

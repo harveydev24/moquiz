@@ -160,3 +160,9 @@ REST_FRAMEWORK = {
 
 DATETIME_FORMAT = "%Y-%m-%d%H:%M:%S"
 L10N = False
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'accounts.serializers.signup.CustomRegisterSerializer',
+}
+
+ACCOUNT_ADAPTER = 'accounts.adapters.CustomAccountAdapter'

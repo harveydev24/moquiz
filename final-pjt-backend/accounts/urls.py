@@ -7,4 +7,6 @@ app_name = 'accounts'
 urlpatterns = [
     path('ranking/', views.ranking),
     path('score/', views.score),
+    path('<int:pk>/', views.profile),
+    path('<int:pk>/follow/', views.follow)
 ]
