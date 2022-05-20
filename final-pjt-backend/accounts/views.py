@@ -41,8 +41,8 @@ def score(request):
 
 
 @api_view(['GET'])
-def profile(request, pk):
-    user = get_object_or_404(User, pk=pk)
+def profile(request, username):
+    user = get_object_or_404(User, username=username)
     if request.method == 'GET':
         serializer = ProfileSerializer(user)
         return Response(serializer.data, status=HTTP_200_OK)
