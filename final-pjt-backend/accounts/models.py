@@ -6,8 +6,8 @@ from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser):
     nickname = models.CharField(max_length=20)
-    score = models.IntegerField(null=True)
-    correct = models.IntegerField(null=True)
-    wrong = models.IntegerField(null=True)
+    score = models.IntegerField(default=0)
+    correct = models.IntegerField(default=0)
+    wrong = models.IntegerField(default=0)
     followings = models.ManyToManyField(
         'self', symmetrical=False, related_name='followers')

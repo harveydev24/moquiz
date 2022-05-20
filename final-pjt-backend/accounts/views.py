@@ -15,7 +15,7 @@ User = get_user_model()
 
 @api_view(['GET'])
 def ranking(request):
-    rankers = User.objects.all().order_by('-score')[:10]
+    rankers = User.objects.all().order_by('-score')[:20]
     serializer = RankingSerializer(rankers, many=True)
     return Response(serializer.data, status=HTTP_200_OK)
 

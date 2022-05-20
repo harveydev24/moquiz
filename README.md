@@ -1,3 +1,9 @@
+## Introduction
+
+최근에 유행했던 Wordle에서 영감을 받아 만들게 된 영화를 이용한 퀴즈를 풀 수 있는 서비스입니다. 명대사 초성 퀴즈, 영화 장면 퀴즈, 제목 퀴즈 등 다양한 퀴즈를 풀고 획득한 점수를 기준으로 랭킹을 제공합니다. 또한 자유롭게 글을 작성할 수 있는 커뮤니티 기능과 '오늘의 영화'라는 추천 서비스도 제공합니다.
+
+
+
 ## Structure
 
 ![structure](README.assets/structure.png)
@@ -27,3 +33,10 @@
 |               | :article_id/comments/:comment_id/ |          X           |         X         |            X            | delete a comment  |
 | movie_quizzes |               quiz/               | get a set of quizzes |         X         |            X            |         X         |
 
+
+
+## Trouble Shooting
+
+django data load
+
+vue MODULE NOT FOUND
