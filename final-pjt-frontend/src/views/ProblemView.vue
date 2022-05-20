@@ -23,27 +23,40 @@
     >
       <div v-if="currQuizType === 1">
         <div class="question text-center">
-          Q. 초성이 나타내는 영화의 제목은?
+          Q{{ currQuizIdx + 1 }}. 초성이 나타내는 영화의 제목은?
         </div>
         <div class="question text-center">
           {{ quizzes[currQuizIdx].problem }}
         </div>
         <div class="input-wrapper">
-          <input type="text" v-model="input" @keyup.enter="typeOneHandler" />
+          <input
+            class="quiz-input"
+            type="text"
+            v-model="input"
+            @keyup.enter="typeOneHandler"
+          />
         </div>
       </div>
       <div v-if="currQuizType === 2">
-        <div class="question text-center">Q. 초성이 나타내는 명대사는?</div>
+        <div class="question text-center">
+          Q{{ currQuizIdx + 1 }}. 초성이 나타내는 명대사는?
+        </div>
         <div class="question text-center">
           {{ quizzes[currQuizIdx].problem }}
         </div>
         <div class="input-wrapper">
-          <input type="text" v-model="input" @keyup.enter="typeTwoHandler" />
+          <input
+            class="quiz-input"
+            type="text"
+            v-model="input"
+            @keyup.enter="typeTwoHandler"
+          />
+          <div v-if="time <= 5">Hint: {{ quizzes[currQuizIdx].title }}</div>
         </div>
       </div>
       <div v-if="currQuizType === 3">
         <div class="question text-center mb-5">
-          Q. 다음 대사는 어느 영화의 대사인가?
+          Q{{ currQuizIdx + 1 }}. 다음 대사는 어느 영화의 대사인가?
         </div>
         <div class="question text-center mb-5">
           {{ quizzes[currQuizIdx].problem }}
@@ -69,7 +82,7 @@
       </div>
       <div v-if="currQuizType === 4">
         <div class="question text-center">
-          Q. 다음 중 같은 영화의 장면이 아닌 것은?
+          Q{{ currQuizIdx + 1 }}. 다음 중 같은 영화의 장면이 아닌 것은?
         </div>
         <b-container>
           <b-row>
@@ -138,6 +151,14 @@ export default {
       message: null,
     };
   },
+  updated() {
+    if (this.time === 10) {
+      if (this.$el.querySelector(".quiz-input")) {
+        console.log(this.$el.querySelector(".quiz-input"));
+        this.$el.querySelector(".quiz-input").focus();
+      }
+    }
+  },
   methods: {
     onClickHandler() {
       this.isQuizOn = true;
@@ -160,27 +181,49 @@ export default {
           console.log(err);
         });
     },
+
     moveToNextQuiz() {
       this.resetTimer();
       this.setTimer();
       this.currQuizIdx += 1;
       if (this.currQuizIdx == 10) {
-        if (this.correct === 10) {
-          this.message = "영화의 제왕!";
-        } else if (this.correct >= 7) {
-          this.message = "좀 치시네요...?";
-        } else if (this.correct >= 5) {
-          this.message = "낫 배드";
-        } else if (this.correct >= 3) {
-          this.message = "영화관에 가보셨나요?";
-        } else {
-          this.message = "영화를 보신 적이 있으신가요?";
-        }
-        this.isQuizOver = true;
-        this.resetTimer();
+        this.afterQuiz();
       } else {
         this.currQuizType = this.quizzes[this.currQuizIdx].type;
       }
+    },
+
+    afterQuiz() {
+      if (this.correct === 10) {
+        this.message = "영화의 제왕!";
+      } else if (this.correct >= 7) {
+        this.message = "좀 치시네요...?";
+      } else if (this.correct >= 5) {
+        this.message = "낫 배드";
+      } else if (this.correct >= 3) {
+        this.message = "영화관에 가보셨나요?";
+      } else {
+        this.message = "영화를 보신 적이 있으신가요?";
+      }
+      this.isQuizOver = true;
+      this.resetTimer();
+      const data = {
+        score: this.score,
+        correct: this.correct,
+        wrong: this.wrong,
+      };
+      axios({
+        url: drf.accounts.score(),
+        method: "put",
+        headers: this.$store.getters.authHeader,
+        data: data,
+      })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
     addScore(delta) {
       this.score += delta;
@@ -245,7 +288,7 @@ export default {
   font-size: 50px;
 }
 
-input {
+.quiz-input {
   width: 100%;
   height: 100px;
 }

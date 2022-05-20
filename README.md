@@ -37,12 +37,22 @@
 
 ## Trouble Shooting
 
-django data load
+### django data load
 
-vue MODULE NOT FOUND
+해결법
+
+notepad++로 data.json UTF-8로 변환하기
+
+### vue MODULE NOT FOUND
 
 ![image-20220520195958511](README.assets/image-20220520195958511.png)
 
 해결법
 
 final-pjt-frontend 내부의 node_modules 폴더 삭제 후 `npm i`
+
+
+
+### `python manage.py runserver` 무반응
+
+![image-20220521010208945](README.assets/image-20220521010208945.png)

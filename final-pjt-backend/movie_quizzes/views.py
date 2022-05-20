@@ -43,7 +43,6 @@ def quiz(request):
     line_pks = random.sample(range(1, line_max_pk), 3)
     for line_pk in line_pks:
         line = Famous_Line.objects.get(pk=line_pk)
-        print(line.line)
         ret['quizzes'].append({
             'type': 2,
             'problem': line.line_initial,
@@ -73,8 +72,8 @@ def quiz(request):
         movie2 = Movie.objects.get(title=movies_have_images[img_idx[1]])
         img1 = Movie_Image.objects.filter(movie=movie1.pk)
         img2 = Movie_Image.objects.filter(movie=movie2.pk)
-        img1_idx = random.sample(range(8), 3)
-        img2_idx = random.randint(0, 7)
+        img1_idx = random.sample(range(10), 3)
+        img2_idx = random.randint(0, 9)
 
         img_src = []
         for idx in img1_idx:
@@ -82,7 +81,7 @@ def quiz(request):
         img_src.append(img2[img2_idx].image_url)
         random.shuffle(img_src)
         ret['quizzes'].append(
-            {'type': 4, 'img_src': img_src, 'ans': img2[img2_idx].image_url})
+            {'type': 4, 'img_src': img_src, 'answer': img2[img2_idx].image_url})
 
     random.shuffle(ret['quizzes'])
 

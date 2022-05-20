@@ -43,6 +43,9 @@
               {{ currentUser.username }}'s page
             </router-link></b-nav-item
           >
+          <b-nav-item v-if="isLoggedIn">
+            <span class="link" @click="logout"> logout </span></b-nav-item
+          >
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
@@ -50,7 +53,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "NavBar",
@@ -60,6 +63,9 @@ export default {
       return this.currentUser.username ? this.currentUser.username : "guest";
     },
   },
+  methods: {
+    ...mapActions(["logout"]),
+  },
 };
 </script>
 
@@ -67,5 +73,9 @@ export default {
 .link {
   text-decoration: none;
   color: white;
+}
+
+.link:hover {
+  color: rgb(116, 116, 116);
 }
 </style>
