@@ -32,7 +32,6 @@ export default {
 
   created() {
     const payload = { username: this.$route.params.username };
-    console.log(payload);
     this.fetchProfile(payload);
   },
 };

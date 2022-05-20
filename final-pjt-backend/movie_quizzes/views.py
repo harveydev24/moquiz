@@ -43,6 +43,7 @@ def quiz(request):
     line_pks = random.sample(range(1, line_max_pk), 3)
     for line_pk in line_pks:
         line = Famous_Line.objects.get(pk=line_pk)
+        print(line.line)
         ret['quizzes'].append({
             'type': 2,
             'problem': line.line_initial,
@@ -51,7 +52,7 @@ def quiz(request):
         })
 
     # 다음 대사는 어떤 영화에 나온 대사인가?
-    line_pks = random.sample(range(1, line_max_pk), 3)
+    line_pks = random.sample(range(1, line_max_pk), 2)
     for line_pk in line_pks:
         line = Famous_Line.objects.get(pk=line_pk)
         ans = line.movie.title
@@ -79,8 +80,9 @@ def quiz(request):
         for idx in img1_idx:
             img_src.append(img1[idx].image_url)
         img_src.append(img2[img2_idx].image_url)
+        random.shuffle(img_src)
         ret['quizzes'].append(
-            {'type': 4, 'img_src': img_src})
+            {'type': 4, 'img_src': img_src, 'ans': img2[img2_idx].image_url})
 
     random.shuffle(ret['quizzes'])
 

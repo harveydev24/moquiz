@@ -40,3 +40,9 @@
 django data load
 
 vue MODULE NOT FOUND
+
+![image-20220520195958511](README.assets/image-20220520195958511.png)
+
+해결법
+
+final-pjt-frontend 내부의 node_modules 폴더 삭제 후 `npm i`
