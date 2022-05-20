@@ -1,3 +1,17 @@
+## Structure
+
+![structure](README.assets/structure.png)
+
+
+
+## ERD
+
+![image-20220520095114312](README.assets/image-20220520095114312.png)
+
+![image-20220520095049614](README.assets/image-20220520095049614.png)
+
+
+
 ## API
 
 |      App      |                URL                |         GET          |       POST        |           PUT           |      DELETE       |
