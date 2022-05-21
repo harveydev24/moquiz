@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.status import *
 
 from .models import *
-from .serializers.article import ArticleSerializer, ArticleDetailSerializer
+from .serializers.article import ArticleSerializer, ArticleLikeSerializer, ArticleDetailSerializer
 # Create your views here.
 
 User = get_user_model()
@@ -59,7 +59,7 @@ def article_like(request, pk):
         article.like_users.remove(user)
     else:
         article.like_users.add(user)
-    serializer = ArticleSerializer(article)
+    serializer = ArticleLikeSerializer(article)
     return Response(serializer.data, status=HTTP_200_OK)
 
 
