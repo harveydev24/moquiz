@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-center mt-5">
     <b-card no-body style="max-width: 20rem">
       <b-card-body>
-        <b-card-title>{{ profile.nickname }}</b-card-title>
+        <b-card-title class="b-card-title">{{ profile.nickname }}</b-card-title>
         <b-card-sub-title class="mb-2"
           >Follwings: {{ profile.followings_cnt }} Follwers:
           {{ profile.followers_cnt }}
@@ -48,3 +48,5 @@ export default {
   },
 };
 </script>
+
+<style></style>

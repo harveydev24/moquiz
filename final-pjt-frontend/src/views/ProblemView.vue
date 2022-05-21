@@ -1,5 +1,6 @@
 <template>
   <div class="problem">
+    <notifications width="45%" group="notifyApp" position="bottom center" />
     <div
       class="d-flex justify-content-center align-itmes-center wrapper"
       v-if="!isQuizLoaded && !isQuizOver"
@@ -219,11 +220,41 @@ export default {
           setTimeout(() => {
             this.isQuizLoaded = true;
             this.setTimer();
-          }, 3000);
+          }, 2000);
         })
         .catch((err) => {
           console.log(err);
         });
+    },
+
+    correctAnswer() {
+      this.$notify({
+        group: "notifyApp",
+        type: "default",
+        duration: 2000,
+        title: "정답!",
+        text: "맞혔습니다!",
+      });
+    },
+
+    worngAnswer() {
+      if (this.currQuizType != 4) {
+        const text = "정답: " + this.quizzes[this.currQuizIdx].answer;
+        this.$notify({
+          group: "notifyApp",
+          type: "error",
+          duration: 2000,
+          title: "땡!",
+          text: text,
+        });
+      } else {
+        this.$notify({
+          group: "notifyApp",
+          type: "error",
+          duration: 3000,
+          title: "땡!",
+        });
+      }
     },
 
     moveToNextQuiz() {
@@ -263,9 +294,7 @@ export default {
         headers: this.$store.getters.authHeader,
         data: data,
       })
-        .then((res) => {
-          console.log(res);
-        })
+        .then(() => {})
         .catch((err) => {
           console.log(err);
         });
@@ -275,9 +304,11 @@ export default {
     },
     addCorrect() {
       this.correct += 1;
+      this.correctAnswer();
     },
     addWrong() {
       this.wrong += 1;
+      this.worngAnswer();
     },
     typeOneHandler() {
       if (
@@ -355,6 +386,9 @@ export default {
       this.time = this.mode;
     },
   },
+  destroyed() {
+    clearInterval(this.timer);
+  },
 };
 </script>
 
@@ -424,11 +458,11 @@ export default {
   color: white;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
+.notification-title {
+  font-size: 60px;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+
+.notification-content {
+  font-size: 40px;
 }
 </style>
