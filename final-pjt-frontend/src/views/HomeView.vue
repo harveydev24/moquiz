@@ -1,9 +1,8 @@
 <template>
-  <div class="home">
+  <div>
     <p>home</p>
   </div>
 </template>
-
 <script>
 // function getYesterday() {
 //   var date = new Date();

@@ -72,8 +72,8 @@ def quiz(request):
         movie2 = Movie.objects.get(title=movies_have_images[img_idx[1]])
         img1 = Movie_Image.objects.filter(movie=movie1.pk)
         img2 = Movie_Image.objects.filter(movie=movie2.pk)
-        img1_idx = random.sample(range(10), 3)
-        img2_idx = random.randint(0, 9)
+        img1_idx = random.sample(range(8), 3)
+        img2_idx = random.randint(0, 7)
 
         img_src = []
         for idx in img1_idx:

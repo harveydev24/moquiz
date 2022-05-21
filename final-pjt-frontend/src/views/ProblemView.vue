@@ -4,13 +4,24 @@
       class="d-flex justify-content-center align-itmes-center wrapper"
       v-if="!isQuizLoaded && !isQuizOver"
     >
-      <b-button
-        v-if="!isQuizOn"
-        variant="danger"
-        class="quiz-start-button"
-        @click="onClickHandler"
-        >퀴즈 풀기</b-button
-      >
+      <div>
+        <b-button
+          v-if="!isQuizOn"
+          variant="success"
+          class="quiz-start-button m-3"
+          @click="onClickHandler(20)"
+          ><span class="quiz-start-button-text">Easy</span></b-button
+        >
+      </div>
+      <div>
+        <b-button
+          v-if="!isQuizOn"
+          variant="danger"
+          class="quiz-start-button m-3"
+          @click="onClickHandler(10)"
+          ><span class="quiz-start-button-text">Hard</span></b-button
+        >
+      </div>
       <div v-if="isQuizOn && !isQuizLoaded" class="d-flex mt-5">
         <h3 class="me-2">퀴즈 생성 중</h3>
         <b-spinner></b-spinner>
@@ -63,20 +74,36 @@
         </div>
         <b-container>
           <b-row>
-            <b-col class="text-center mb-5 question"
-              >1. {{ quizzes[currQuizIdx].option[0] }}</b-col
-            >
-            <b-col class="text-center mb-5 question"
-              >2. {{ quizzes[currQuizIdx].option[1] }}</b-col
-            >
+            <b-col
+              class="text-center mt-3 mb-3 question option"
+              @click="typeThreeHandler(0)"
+              ><span class="type-three-option">{{
+                quizzes[currQuizIdx].option[0]
+              }}</span>
+            </b-col>
+            <b-col
+              class="text-center mt-3 mb-3 question option"
+              @click="typeThreeHandler(1)"
+              ><span class="type-three-option">{{
+                quizzes[currQuizIdx].option[1]
+              }}</span>
+            </b-col>
           </b-row>
           <b-row>
-            <b-col class="text-center question"
-              >3. {{ quizzes[currQuizIdx].option[2] }}</b-col
-            >
-            <b-col class="text-center question"
-              >4. {{ quizzes[currQuizIdx].option[3] }}</b-col
-            >
+            <b-col
+              class="text-center question option"
+              @click="typeThreeHandler(2)"
+              ><span class="type-three-option">{{
+                quizzes[currQuizIdx].option[2]
+              }}</span>
+            </b-col>
+            <b-col
+              class="text-center question option"
+              @click="typeThreeHandler(3)"
+              ><span class="type-three-option">{{
+                quizzes[currQuizIdx].option[3]
+              }}</span>
+            </b-col>
           </b-row>
         </b-container>
       </div>
@@ -86,19 +113,34 @@
         </div>
         <b-container>
           <b-row>
-            <b-col>
-              <img class="mb-3" :src="quizzes[currQuizIdx].img_src[0]" alt="" />
+            <b-col class="option" @click="typeFourHandler(0)">
+              <img
+                class="mb-3 type-four-option"
+                :src="quizzes[currQuizIdx].img_src[0]"
+                alt=""
+              />
             </b-col>
-            <b-col
-              ><img class="mb-3" :src="quizzes[currQuizIdx].img_src[1]" alt=""
+            <b-col class="option" @click="typeFourHandler(1)"
+              ><img
+                class="mb-3 type-four-option"
+                :src="quizzes[currQuizIdx].img_src[1]"
+                alt=""
             /></b-col>
           </b-row>
           <b-row>
-            <b-col
-              ><img :src="quizzes[currQuizIdx].img_src[2]" alt="" />
+            <b-col class="option" @click="typeFourHandler(2)"
+              ><img
+                class="type-four-option"
+                :src="quizzes[currQuizIdx].img_src[2]"
+                alt=""
+              />
             </b-col>
-            <b-col
-              ><img :src="quizzes[currQuizIdx].img_src[3]" alt="" />
+            <b-col class="option" @click="typeFourHandler(3)"
+              ><img
+                class="type-four-option"
+                :src="quizzes[currQuizIdx].img_src[3]"
+                alt=""
+              />
             </b-col>
           </b-row>
         </b-container>
@@ -149,19 +191,21 @@ export default {
       isQuizOver: false,
       timer: null,
       message: null,
+      mode: null,
     };
   },
   updated() {
-    if (this.time === 10) {
+    if (this.time === this.mode) {
       if (this.$el.querySelector(".quiz-input")) {
-        console.log(this.$el.querySelector(".quiz-input"));
         this.$el.querySelector(".quiz-input").focus();
       }
     }
   },
   methods: {
-    onClickHandler() {
+    onClickHandler(mode) {
       this.isQuizOn = true;
+      this.mode = mode;
+      this.time = this.mode;
 
       axios({
         url: drf.movie_quizzes.quiz(),
@@ -183,6 +227,7 @@ export default {
     },
 
     moveToNextQuiz() {
+      this.input = "";
       this.resetTimer();
       this.setTimer();
       this.currQuizIdx += 1;
@@ -235,24 +280,64 @@ export default {
       this.wrong += 1;
     },
     typeOneHandler() {
-      if (this.input === this.quizzes[this.currQuizIdx].answer) {
+      if (
+        this.input === this.quizzes[this.currQuizIdx].answer &&
+        this.time != this.mode
+      ) {
         this.score += 10;
+        if (this.mode === 10) {
+          this.score += 10;
+        }
         this.addCorrect();
       } else {
         this.addWrong();
       }
       this.moveToNextQuiz();
-      this.input = "";
     },
     typeTwoHandler() {
-      if (this.input === this.quizzes[this.currQuizIdx].answer) {
+      if (
+        this.input === this.quizzes[this.currQuizIdx].answer &&
+        this.time != this.mode
+      ) {
         this.score += 20;
+        if (this.mode === 10) {
+          this.score += 20;
+        }
         this.addCorrect();
       } else {
         this.addWrong();
       }
       this.moveToNextQuiz();
-      this.input = "";
+    },
+    typeThreeHandler(optionIdx) {
+      if (
+        this.quizzes[this.currQuizIdx].answer ===
+        this.quizzes[this.currQuizIdx].option[optionIdx]
+      ) {
+        this.score += 15;
+        if (this.mode === 10) {
+          this.score += 15;
+        }
+        this.addCorrect();
+      } else {
+        this.addWrong();
+      }
+      this.moveToNextQuiz();
+    },
+    typeFourHandler(optionIdx) {
+      if (
+        this.quizzes[this.currQuizIdx].answer ===
+        this.quizzes[this.currQuizIdx].img_src[optionIdx]
+      ) {
+        this.score += 10;
+        if (this.mode === 10) {
+          this.score += 10;
+        }
+        this.addCorrect();
+      } else {
+        this.addWrong();
+      }
+      this.moveToNextQuiz();
     },
     setTimer() {
       this.timer = setInterval(() => {
@@ -267,7 +352,7 @@ export default {
     },
     resetTimer() {
       clearInterval(this.timer);
-      this.time = 10;
+      this.time = this.mode;
     },
   },
 };
@@ -283,6 +368,10 @@ export default {
   height: 10em;
 }
 
+.quiz-start-button-text {
+  font-size: 60px;
+}
+
 .input-wrapper {
   text-align: center;
   font-size: 50px;
@@ -293,10 +382,16 @@ export default {
   height: 100px;
 }
 
-img {
+.type-four-option {
   width: 400px;
   height: 250px;
   object-fit: cover;
+  transition: all 0.2s linear;
+  overflow: hidden;
+}
+
+.type-four-option:hover {
+  transform: scale(1.1);
 }
 
 .question {
@@ -308,5 +403,32 @@ img {
 .timer {
   font-weight: bolder;
   font-size: 50px;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.type-three-option {
+  font-weight: bolder;
+  font-size: 50px;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 0 0 #000000;
+  color: #000000;
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.type-three-option:hover {
+  box-shadow: inset 300px 0 0 0 #000000;
+  color: white;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

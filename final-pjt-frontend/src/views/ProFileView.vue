@@ -10,9 +10,18 @@
       </b-card-body>
 
       <b-list-group flush>
-        <b-list-group-item>획득한 점수: {{ profile.score }}</b-list-group-item>
-        <b-list-group-item>맞힌 문제: {{ profile.correct }}</b-list-group-item>
-        <b-list-group-item>틀린 문제: {{ profile.wrong }}</b-list-group-item>
+        <b-list-group-item
+          >획득한 점수:
+          <animated-integer :value="profile.score"></animated-integer
+        ></b-list-group-item>
+        <b-list-group-item
+          >맞힌 문제:
+          <animated-integer :value="profile.correct"></animated-integer
+        ></b-list-group-item>
+        <b-list-group-item
+          >틀린 문제:
+          <animated-integer :value="profile.wrong"></animated-integer
+        ></b-list-group-item>
       </b-list-group>
     </b-card>
   </div>
@@ -20,9 +29,12 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import AnimatedInteger from "../components/AnimatedInteger.vue";
 
 export default {
   name: "ProFileView",
+  components: { AnimatedInteger },
+
   computed: {
     ...mapGetters(["profile"]),
   },
