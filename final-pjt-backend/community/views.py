@@ -6,7 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.status import *
 
 from .models import *
-from .serializers.article import ArticleSerializer
+from .serializers.article import ArticleSerializer, ArticleDetailSerializer
 # Create your views here.
 
 User = get_user_model()
@@ -36,7 +36,7 @@ def article(request, pk):
     article = get_object_or_404(Article, pk=pk)
 
     if request.method == 'GET':
-        serializer = ArticleSerializer(article)
+        serializer = ArticleDetailSerializer(article)
         return Response(serializer.data, status=HTTP_200_OK)
 
     elif request.method == 'PUT':
@@ -59,7 +59,8 @@ def article_like(request, pk):
         article.like_users.remove(user)
     else:
         article.like_users.add(user)
-    return Response(status=HTTP_200_OK)
+    serializer = ArticleSerializer(article)
+    return Response(serializer.data, status=HTTP_200_OK)
 
 
 @api_view(['POST'])
