@@ -17,7 +17,7 @@ class ArticleDetailSerializer(serializers.ModelSerializer):
 
         class Meta:
             model = Comment
-            fields = ('username', 'content')
+            fields = '__all__'
 
     comments = CommentSerializer(many=True, read_only=True)
 
