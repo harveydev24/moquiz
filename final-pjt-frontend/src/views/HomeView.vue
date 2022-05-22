@@ -56,6 +56,59 @@
                   @click="onClickPopular(movie)"
                 />
               </carousel> </b-overlay
+          ></b-col> </b-row
+        ><b-row>
+          <b-col cols="12"
+            ><h1 class="text-center m-3">평점 높은 영화</h1>
+            <!-- 28 -->
+            <b-overlay
+              :show="showTopRated"
+              @click="showTopRated = !showTopRated"
+            >
+              <template #overlay>
+                <h1 class="movie-title">{{ selectedTopRated.title }}</h1>
+                <h4>평점 평균: {{ selectedTopRated.vote_average }}</h4>
+                <br />
+                <p>{{ selectedTopRated.overview }}</p>
+              </template>
+              <carousel :items="6" :autoplay="true" :autoplayHoverPause="true">
+                <img
+                  class="movie-image"
+                  v-for="movie in topRated"
+                  :key="movie.title"
+                  :src="
+                    'https://image.tmdb.org/t/p/original/' + movie.poster_path
+                  "
+                  @click="onClickTopRated(movie)"
+                />
+              </carousel> </b-overlay
+          ></b-col>
+        </b-row>
+        <b-row>
+          <b-col cols="12"
+            ><h1 class="text-center m-3">개봉 예정 영화</h1>
+            <!-- 28 -->
+            <b-overlay
+              :show="showUpcoming"
+              @click="showUpcoming = !showUpcoming"
+            >
+              <template #overlay>
+                <h1 class="movie-title">{{ selectedUpcoming.title }}</h1>
+                <h4>개봉일: {{ selectedUpcoming.release_date }}</h4>
+                <br />
+                <p>{{ selectedUpcoming.overview }}</p>
+              </template>
+              <carousel :items="6" :autoplay="true" :autoplayHoverPause="true">
+                <img
+                  class="movie-image"
+                  v-for="movie in upcoming"
+                  :key="movie.title"
+                  :src="
+                    'https://image.tmdb.org/t/p/original/' + movie.poster_path
+                  "
+                  @click="onClickUpcoming(movie)"
+                />
+              </carousel> </b-overlay
           ></b-col>
         </b-row>
       </b-container>
@@ -97,6 +150,14 @@ export default {
     onClickPopular(movie) {
       this.showPopular = !this.showPopular;
       this.selectedPopular = movie;
+    },
+    onClickTopRated(movie) {
+      this.showTopRated = !this.showTopRated;
+      this.selectedTopRated = movie;
+    },
+    onClickUpcoming(movie) {
+      this.showUpcoming = !this.showUpcoming;
+      this.selectedUpcoming = movie;
     },
   },
   created() {
