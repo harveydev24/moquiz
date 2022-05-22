@@ -10,10 +10,17 @@ from bs4 import BeautifulSoup
 
 from .models import *
 from .serializers.article import ArticleSerializer, ArticleLikeSerializer, ArticleDetailSerializer
+
+from datetime import datetime
+import functools
 # Create your views here.
 
 User = get_user_model()
-home_data = None
+
+TMDB_POPULAR_URL = 'https://api.themoviedb.org/3/movie/popular'
+TMDB_TOP_RATED_URL = 'https://api.themoviedb.org/3/movie/top_rated'
+TMDB_UPCOMING_URL = 'https://api.themoviedb.org/3/movie/upcoming'
+TMDB_API_KEY = '319d3b03939a4c941ec089a172df7e23'
 
 
 @api_view(['GET'])
@@ -89,14 +96,18 @@ def comment_delete(request, article_pk, comment_pk):
 
 @api_view(['GET'])
 def home(request):
-    global home_data
 
-    if home_data != None:
-        return Response(home_data, status=HTTP_200_OK)
+    date = datetime.today().day
+    movies = fetch_data(date)
 
+    return Response(movies, status=HTTP_200_OK)
+
+
+@functools.lru_cache(None)
+def fetch_data(date):
     url = 'http://www.cgv.co.kr/movies/?lt=1&ft=0'
     response = requests.get(url).text
-    movies = {'data': []}
+    movies = {'boxoffice': []}
     doc = BeautifulSoup(response, 'html.parser')
     doc = doc.select_one(
         '#contents > div.wrap-movie-chart > div.sect-movie-chart')
@@ -122,9 +133,21 @@ def home(request):
                 overview = ' '.join(doc_detail.select_one(
                     '.sect-story-movie').get_text().split())
 
-                movies['data'].append({'title': result.select_one('strong').text, 'image': image.select_one('img')[
+                movies['boxoffice'].append({'title': result.select_one('strong').text, 'image': image.select_one('img')[
                     'src'], 'percent': result.select_one('span').text, 'url': movie_url, 'director': director, 'actors': actors, 'overview': overview})
 
-    home_data = movies['data']
+    popular_movies = requests.get(
+        TMDB_POPULAR_URL, {'api_key': TMDB_API_KEY, 'language': 'ko-KR'})
 
-    return Response(movies['data'], status=HTTP_200_OK)
+    movies['popular'] = popular_movies.json()['results']
+
+    top_rated_movies = requests.get(
+        TMDB_TOP_RATED_URL, {'api_key': TMDB_API_KEY, 'language': 'ko-KR'})
+
+    movies['top_rated'] = top_rated_movies.json()['results']
+
+    upcoming_movies = requests.get(
+        TMDB_UPCOMING_URL, {'api_key': TMDB_API_KEY, 'language': 'ko-KR'})
+
+    movies['upcoming'] = upcoming_movies.json()['results']
+    return movies
