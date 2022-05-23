@@ -175,11 +175,11 @@
       <span>{{ time }}</span>
     </div>
     <div v-if="isQuizOver">
-      <div class="d-flex justify-content-center mt-5">
-        <b-card no-body style="max-width: 20rem">
+      <div class="d-flex justify-content-center mt-5 b-card">
+        <b-card no-body style="width: 25rem">
           <b-card-body>
-            <b-card-title>퀴즈 끝!</b-card-title>
-            <b-card-sub-title class="mb-2">
+            <b-card-title class="b-card-title">퀴즈 끝!</b-card-title>
+            <b-card-sub-title class="mb-2 b-card-subtitle">
               <span>{{ message }}</span>
             </b-card-sub-title>
           </b-card-body>
@@ -187,6 +187,13 @@
             <b-list-group-item>획득한 점수: {{ score }}</b-list-group-item>
             <b-list-group-item>맞힌 문제: {{ correct }}</b-list-group-item>
             <b-list-group-item>틀린 문제: {{ wrong }}</b-list-group-item>
+            <b-list-group-item>
+              <div class="d-flex justify-content-center">
+                <b-button @click="again" block variant="primary" size="lg"
+                  >한 번 더?</b-button
+                >
+              </div>
+            </b-list-group-item>
           </b-list-group>
         </b-card>
       </div>
@@ -197,6 +204,7 @@
 <script>
 import axios from "axios";
 import drf from "@/api/drf";
+import router from "@/router";
 
 export default {
   name: "ProblemView",
@@ -409,6 +417,10 @@ export default {
       clearInterval(this.timer);
       this.time = this.mode;
     },
+    again() {
+      console.log("hi");
+      router.go();
+    },
   },
   destroyed() {
     clearInterval(this.timer);
@@ -511,5 +523,19 @@ font-family: 'Oswald', sans-serif; */
 
 .notification-content {
   font-size: 40px;
+}
+
+.b-card-title {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 60px;
+}
+.b-card-subtitle {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 30px;
+}
+
+.b-card {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 50px;
 }
 </style>

@@ -12,7 +12,8 @@ import random
 
 User = get_user_model()
 
-movies_have_images = ['내부자들', '베테랑', '아저씨', '부당거래', '신세계']
+movies_have_images = ['내부자들', '베테랑', '아저씨',
+                      '부당거래', '신세계', '추격자', '범죄와의 전쟁', '달콤한 인생', '올드보이']
 
 
 @api_view(['GET'])
@@ -67,7 +68,7 @@ def quiz(request):
 
     # 이미지 퀴즈
     for _ in range(2):
-        img_idx = random.sample(range(5), 2)
+        img_idx = random.sample(range(9), 2)
         movie1 = Movie.objects.get(title=movies_have_images[img_idx[0]])
         movie2 = Movie.objects.get(title=movies_have_images[img_idx[1]])
         img1 = Movie_Image.objects.filter(movie=movie1.pk)
