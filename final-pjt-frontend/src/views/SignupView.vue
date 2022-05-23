@@ -3,6 +3,7 @@
     <b-container class="signup-wrapper">
       <b-row class="signup-row">
         <b-col class="text-center">
+          <h1 class="banner"><b>Moquiz on the SSAFY</b></h1>
           <b-form @submit.prevent="signup(credentials)" class="signup-form">
             <h1 class="text-center">회원가입</h1>
             <account-error-list v-if="authError"></account-error-list>
@@ -13,6 +14,7 @@
               type="text"
               placeholder="아이디"
               required
+              autofocus
               class="mt-3"
             ></b-form-input>
             <b-form-input
@@ -85,6 +87,24 @@ export default {
 font-family: 'Do Hyeon', sans-serif;
 font-family: 'Oswald', sans-serif; */
 
+.banner {
+  text-align: center;
+  font-size: 7rem;
+  font-family: "Courgette", cursive;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+  margin-top: 3%;
+}
+
+.banner b {
+  color: #fee;
+  text-shadow: 0 -40px 140px, 0 0 2px, 0 0 0.3em #ff4444, 0 0 0.3em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+
 .signup-background {
   background-image: url("https://assets-global.website-files.com/5e4f771ff45e4c54cb345de3/61401cbff9b93566a1e2d6b0_%2525EB%252589%2525B4%2525EC%25258A%2525A4-%2525EA%2525B7%2525B8%2525EB%2525A6%2525AC%2525EB%252593%25259C-%2525EC%25259D%2525B4%2525EB%2525AF%2525B8%2525EC%2525A7%252580-(2).png");
   background-size: cover;
@@ -103,7 +123,7 @@ font-family: 'Oswald', sans-serif; */
 
 .signup-form {
   position: relative;
-  top: 25%;
+  top: 5%;
   margin: auto;
   width: 20%;
   padding: 20px;
