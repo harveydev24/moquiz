@@ -4,6 +4,7 @@ from django.contrib.auth import get_user_model
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.status import *
+from rest_framework.authtoken.models import Token
 
 from .serializers.ranking import RankingSerializer
 from .serializers.profile import ProfileSerializer
@@ -50,10 +51,20 @@ def profile(request, username):
 @api_view(['PUT'])
 def follow(request, pk):
     target_user = get_object_or_404(User, pk=pk)
-    user = request.user
+    user = get_object_or_404(User, username=request.user)
+
     if target_user.followers.filter(pk=user.pk).exists():
-        target_user.followers.remove(user)
+        target_user.followers.remove(user.pk)
+
     else:
-        target_user.followers.add(user)
-    serializer = ProfileSerializer(user)
+        target_user.followers.add(user.pk)
+
+    serializer = ProfileSerializer(target_user)
     return Response(serializer.data, status=HTTP_200_OK)
+
+
+@api_view(['GET'])
+def all_user(request):
+    users = User.objects.all()
+    serializer = ProfileSerializer(users, many=True)
+    return Response(serializer.data)

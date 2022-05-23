@@ -1,7 +1,7 @@
 <template>
   <div class="login-background">
     <b-container class="login-wrapper">
-      <b-row class="row">
+      <b-row class="login-row">
         <b-col class="text-center">
           <b-form @submit.prevent="login(credentials)" class="login-form">
             <h1 class="text-center">로그인</h1>
@@ -79,7 +79,7 @@ font-family: 'Oswald', sans-serif; */
   height: 100vh;
 }
 
-.row {
+.login-row {
   height: 100%;
 }
 

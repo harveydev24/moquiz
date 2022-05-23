@@ -2,7 +2,7 @@
   <div class="problem">
     <notifications width="45%" group="notifyApp" position="bottom center" />
     <div
-      class="d-flex justify-content-center align-itmes-center wrapper"
+      class="d-flex justify-content-center align-itmes-center problem-wrapper"
       v-if="!isQuizLoaded && !isQuizOver"
     >
       <b-container v-if="!isQuizOn">
@@ -434,7 +434,7 @@ export default {
 font-family: 'Do Hyeon', sans-serif;
 font-family: 'Oswald', sans-serif; */
 
-.wrapper {
+.problem-wrapper {
   margin-top: 10em;
 }
 
