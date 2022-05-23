@@ -5,27 +5,46 @@
       class="d-flex justify-content-center align-itmes-center wrapper"
       v-if="!isQuizLoaded && !isQuizOver"
     >
-      <div>
-        <b-button
-          v-if="!isQuizOn"
-          variant="success"
-          class="quiz-start-button m-3"
-          @click="onClickHandler(20)"
-          ><span class="quiz-start-button-text">Easy</span></b-button
+      <b-container v-if="!isQuizOn">
+        <b-row
+          ><b-col class="d-flex justify-content-center"
+            ><h1 class="korean-title">준비 됐나요?</h1></b-col
+          ></b-row
         >
-      </div>
-      <div>
-        <b-button
-          v-if="!isQuizOn"
-          variant="danger"
-          class="quiz-start-button m-3"
-          @click="onClickHandler(10)"
-          ><span class="quiz-start-button-text">Hard</span></b-button
+        <b-row
+          ><b-col class="d-flex justify-content-center">
+            <b-button
+              id="easy"
+              variant="success"
+              class="quiz-start-button m-3"
+              @click="onClickHandler(20)"
+              ><span class="quiz-start-button-text">Easy</span></b-button
+            ><b-button
+              id="hard"
+              variant="danger"
+              class="quiz-start-button m-3"
+              @click="onClickHandler(10)"
+              ><span class="quiz-start-button-text">Hard</span></b-button
+            ></b-col
+          ></b-row
         >
-      </div>
-      <div v-if="isQuizOn && !isQuizLoaded" class="d-flex mt-5">
-        <h3 class="me-2">퀴즈 생성 중</h3>
-        <b-spinner></b-spinner>
+      </b-container>
+
+      <b-tooltip target="easy" triggers="hover" class="korean">
+        문제당 시간제한 <b>20초!</b>
+      </b-tooltip>
+      <b-tooltip target="hard" triggers="hover" class="korean">
+        문제당 시간제한 <b>10초!</b>
+      </b-tooltip>
+      <div
+        v-if="isQuizOn && !isQuizLoaded"
+        class="d-flex mt-5 align-items-center"
+      >
+        <h3 class="me-2 korean loading">퀴즈 생성 중</h3>
+        <b-spinner
+          style="width: 3rem; height: 3rem"
+          class="ms-2 mb-3"
+        ></b-spinner>
       </div>
     </div>
 
@@ -63,7 +82,12 @@
             v-model="input"
             @keyup.enter="typeTwoHandler"
           />
-          <div v-if="time <= 5">Hint: {{ quizzes[currQuizIdx].title }}</div>
+          <div v-if="mode === 20" class="korean">
+            Hint: {{ quizzes[currQuizIdx].title }}
+          </div>
+          <div v-if="time <= 5 && mode === 10" class="korean">
+            Hint: {{ quizzes[currQuizIdx].title }}
+          </div>
         </div>
       </div>
       <div v-if="currQuizType === 3">
@@ -393,8 +417,18 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+/* font-family: 'Courgette', cursive;
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
 .wrapper {
   margin-top: 10em;
+}
+
+.korean-title {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 100px;
 }
 
 .quiz-start-button {
@@ -402,8 +436,13 @@ export default {
   height: 10em;
 }
 
+.quiz-start-button:hover {
+  transform: scale(1.05);
+}
+
 .quiz-start-button-text {
   font-size: 60px;
+  font-family: "Oswald", sans-serif;
 }
 
 .input-wrapper {
@@ -414,6 +453,7 @@ export default {
 .quiz-input {
   width: 100%;
   height: 100px;
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .type-four-option {
@@ -427,11 +467,18 @@ export default {
 .type-four-option:hover {
   transform: scale(1.1);
 }
+.loading {
+  font-size: 50px;
+}
 
 .question {
-  font-weight: bolder;
   font-size: 50px;
   margin-bottom: 10px;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.korean {
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .timer {
@@ -444,7 +491,6 @@ export default {
 }
 
 .type-three-option {
-  font-weight: bolder;
   font-size: 50px;
   margin-bottom: 10px;
   box-shadow: inset 0 0 0 0 #000000;
@@ -452,6 +498,7 @@ export default {
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
   transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  font-family: "Do Hyeon", sans-serif;
 }
 .type-three-option:hover {
   box-shadow: inset 300px 0 0 0 #000000;

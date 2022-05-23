@@ -1,6 +1,10 @@
 <template>
   <div class="ranking">
-    <b-table striped hover :items="users"></b-table>
+    <b-container>
+      <b-row
+        ><b-col> <b-table striped hover :items="users"></b-table> </b-col
+      ></b-row>
+    </b-container>
   </div>
 </template>
 
@@ -32,3 +36,14 @@ export default {
   },
 };
 </script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+/* font-family: 'Courgette', cursive;
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Oswald', sans-serif; */
+.ranking {
+  font-size: 25px;
+  font-family: "Do Hyeon", sans-serif;
+}
+</style>

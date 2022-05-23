@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex justify-content-center mt-5">
-    <b-card no-body style="max-width: 20rem">
+  <div class="d-flex justify-content-center mt-5 b-card">
+    <b-card no-body style="width: 25rem">
       <b-card-body>
         <b-card-title class="b-card-title">{{ profile.nickname }}</b-card-title>
-        <b-card-sub-title class="mb-2"
+        <b-card-sub-title class="mb-2 b-card-subtitle"
           >Follwings: {{ profile.followings_cnt }} Follwers:
           {{ profile.followers_cnt }}
         </b-card-sub-title>
@@ -49,4 +49,22 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+/* font-family: 'Courgette', cursive;
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Oswald', sans-serif; */
+.b-card-title {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 60px;
+}
+.b-card-subtitle {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 30px;
+}
+
+.b-card {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 50px;
+}
+</style>

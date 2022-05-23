@@ -1,7 +1,9 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="#">Moquiz on the SSAFY</b-navbar-brand>
+      <b-navbar-brand href="/" class="ms-3 brand"
+        >Moquiz on the SSAFY</b-navbar-brand
+      >
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -70,9 +72,19 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+/* font-family: 'Courgette', cursive;
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Oswald', sans-serif; */
+.brand {
+  font-family: "Courgette", cursive;
+}
+
 .link {
   text-decoration: none;
   color: white;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 25px;
 }
 
 .link:hover {

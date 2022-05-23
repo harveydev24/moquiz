@@ -1,15 +1,29 @@
 <template>
-  <div>
-    <div v-if="!isLoaded" class="d-flex mt-5 justify-content-center">
-      <h3 class="me-2">데이터 가져오는 중</h3>
-      <b-spinner></b-spinner>
+  <div class="background">
+    <div
+      v-if="!isLoaded"
+      class="d-flex mt-5 justify-content-center align-items-center"
+    >
+      <h3 class="me-2 loading">데이터 가져오는 중</h3>
+      <b-spinner
+        style="width: 3rem; height: 3rem"
+        class="ms-2 mb-2"
+      ></b-spinner>
     </div>
     <div v-else>
-      <h1 class="text-center m-3 box-office-head">Weekly Box Office</h1>
+      <h1 class="text-center p-3 boxoffice-head">
+        <b> Weekly Box Office </b>
+      </h1>
       <b-overlay :show="show" @click="show = !show">
         <template #overlay>
-          <h1 class="movie-title">{{ selected.title }}</h1>
-          <h4>{{ ranking }}위[예매율: {{ selected.percent }}]</h4>
+          <h1 class="movie-title">
+            {{ selected.title }}
+            <a :href="selected.url"
+              ><b-button variant="info">예매하기</b-button></a
+            >
+          </h1>
+          <h4>Box Office {{ ranking }}위[예매율: {{ selected.percent }}]</h4>
+
           <h4>감독: {{ selected.director }}</h4>
           <h5>
             <span>출연: </span
@@ -20,7 +34,12 @@
           <br />
           <p>{{ selected.overview }}</p>
         </template>
-        <carousel :items="4" :autoplay="true" :autoplayHoverPause="true">
+        <carousel
+          :nav="false"
+          :items="4"
+          :autoplay="true"
+          :autoplayHoverPause="true"
+        >
           <img
             class="movie-image"
             v-for="(movie, idx) in movies"
@@ -31,13 +50,15 @@
         </carousel>
       </b-overlay>
       <br />
-      <h1 class="text-center m-3 recommendation-head">이런 영화는 어때요?</h1>
+      <h1 class="text-center m-3 recommendation-head">
+        <b> 이런 영화는 어때요? </b>
+      </h1>
 
       <b-container>
         <b-row>
           <b-col cols="12"
             ><h1 class="text-center m-3 recommendation-small-head">
-              인기 영화
+              <b> 인기 영화 </b>
             </h1>
             <!-- 28 -->
             <b-overlay :show="showPopular" @click="showPopular = !showPopular">
@@ -48,6 +69,7 @@
                 <p>{{ selectedPopular.overview }}</p>
               </template>
               <carousel
+                :nav="false"
                 :items="6"
                 :margin="17"
                 :autoplay="true"
@@ -67,7 +89,7 @@
         ><b-row>
           <b-col cols="12"
             ><h1 class="text-center m-3 recommendation-small-head">
-              평점 높은 영화
+              <b> 평점 높은 영화 </b>
             </h1>
             <!-- 28 -->
             <b-overlay
@@ -81,6 +103,7 @@
                 <p>{{ selectedTopRated.overview }}</p>
               </template>
               <carousel
+                :nav="false"
                 :items="6"
                 :margin="17"
                 :autoplay="true"
@@ -101,7 +124,7 @@
         <b-row>
           <b-col cols="12"
             ><h1 class="text-center m-3 recommendation-small-head">
-              개봉 예정 영화
+              <b> 개봉 예정 영화 </b>
             </h1>
             <!-- 28 -->
             <b-overlay
@@ -115,6 +138,7 @@
                 <p>{{ selectedUpcoming.overview }}</p>
               </template>
               <carousel
+                :nav="false"
                 :items="6"
                 :margin="17"
                 :autoplay="true"
@@ -131,31 +155,6 @@
                 />
               </carousel> </b-overlay
           ></b-col>
-        </b-row>
-        <b-row>
-          <b-col>
-            <carousel
-              :autoplay="true"
-              :autoplayHoverPause="true"
-              :autoWidth="true"
-              :margin="15"
-            >
-              <div class="my-item">hihihihihi</div>
-              <div class="my-item2">hihihihihi</div>
-              <div class="my-item">hihihihihi</div>
-              <div class="my-item">hihihihihi</div>
-              <div class="my-item2">hihihihihi</div>
-              <div class="my-item2">hihihihihi</div>
-              <div class="my-item">hihihihihi</div>
-              <div class="my-item">hihihihihi</div>
-              <div class="my-item2">hihihihihi</div>
-              <div class="my-item2">hihihihihi</div>
-              <div class="my-item2">hihihihihi</div>
-              <div class="my-item">hihihihihi</div>
-              <div class="my-item2">hihihihihi</div>
-              <div class="my-item">hihihihihi</div>
-            </carousel>
-          </b-col>
         </b-row>
       </b-container>
     </div>
@@ -192,6 +191,7 @@ export default {
       this.show = !this.show;
       this.selected = movie;
       this.ranking = idx + 1;
+      console.log(movie);
     },
     onClickPopular(movie) {
       this.showPopular = !this.showPopular;
@@ -226,29 +226,61 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@400&display=swap");
 /* font-family: 'Courgette', cursive;
 font-family: 'Do Hyeon', sans-serif;
 font-family: 'Oswald', sans-serif; */
 
-.wrapper {
-  border-width: 25px;
-  border-style: outset;
+.boxoffice-head {
+  text-align: center;
+  font-size: 5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
 }
 
-.box-office-head {
-  font-family: "Oswald", sans-serif;
-  font-size: 5rem;
+.boxoffice-head b {
+  color: #fee;
+  text-shadow: 0 -40px 140px, 0 0 2px, 0 0 0.3em #ff4444, 0 0 0.3em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+
+.loading {
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .recommendation-head {
-  font-family: "Do Hyeon", sans-serif;
+  text-align: center;
   font-size: 5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+}
+
+.recommendation-head b {
+  color: #fee;
+  text-shadow: 0 -40px 140px, 0 0 2px, 0 0 0.3em #0fa, 0 0 0.3em #0fa,
+    0 0 0.1em #0fa, 0 10px 3px #000;
 }
 
 .recommendation-small-head {
-  font-family: "Do Hyeon", sans-serif;
+  text-align: center;
   font-size: 3.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+}
+
+.recommendation-small-head b {
+  color: #fee;
+  text-shadow: 0 -40px 140px, 0 0 2px, 0 0 1em #8b00ff, 0 0 0.5em #8b00ff,
+    0 0 0.1em #8b00ff, 0 10px 3px #000;
 }
 
 .movie-image {
@@ -274,14 +306,7 @@ font-family: 'Oswald', sans-serif; */
   font-weight: bolder;
 }
 
-.my-item {
-  background-color: red;
-  height: 300px;
-  width: 200px;
-}
-.my-item2 {
-  background-color: red;
-  height: 300px;
-  width: 400px;
+.background {
+  background-color: #212529;
 }
 </style>
