@@ -84,14 +84,17 @@ def comment_create(request, pk):
     comment.content = request.data['content']
 
     comment.save()
-    return Response(status=HTTP_201_CREATED)
+    serializer = ArticleLikeSerializer(article)
+    return Response(serializer.data, status=HTTP_201_CREATED)
 
 
 @api_view(['DELETE'])
 def comment_delete(request, article_pk, comment_pk):
+    article = get_object_or_404(Article, pk=article_pk)
     comment = get_object_or_404(Comment, pk=comment_pk)
     comment.delete()
-    return Response(status=HTTP_200_OK)
+    serializer = ArticleLikeSerializer(article)
+    return Response(serializer.data, status=HTTP_200_OK)
 
 
 @api_view(['GET'])

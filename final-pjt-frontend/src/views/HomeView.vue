@@ -5,7 +5,7 @@
       <b-spinner></b-spinner>
     </div>
     <div v-else>
-      <h1 class="text-center m-3">Weekly Box Office</h1>
+      <h1 class="text-center m-3 box-office-head">Weekly Box Office</h1>
       <b-overlay :show="show" @click="show = !show">
         <template #overlay>
           <h1 class="movie-title">{{ selected.title }}</h1>
@@ -31,12 +31,14 @@
         </carousel>
       </b-overlay>
       <br />
-      <h1 class="text-center m-3">이런 영화는 어때요?</h1>
+      <h1 class="text-center m-3 recommendation-head">이런 영화는 어때요?</h1>
 
       <b-container>
         <b-row>
           <b-col cols="12"
-            ><h1 class="text-center m-3">인기 영화</h1>
+            ><h1 class="text-center m-3 recommendation-small-head">
+              인기 영화
+            </h1>
             <!-- 28 -->
             <b-overlay :show="showPopular" @click="showPopular = !showPopular">
               <template #overlay>
@@ -45,9 +47,14 @@
                 <br />
                 <p>{{ selectedPopular.overview }}</p>
               </template>
-              <carousel :items="6" :autoplay="true" :autoplayHoverPause="true">
+              <carousel
+                :items="6"
+                :margin="17"
+                :autoplay="true"
+                :autoplayHoverPause="true"
+              >
                 <img
-                  class="movie-image"
+                  class="recommendation-image"
                   v-for="movie in popular"
                   :key="movie.title"
                   :src="
@@ -59,7 +66,9 @@
           ></b-col> </b-row
         ><b-row>
           <b-col cols="12"
-            ><h1 class="text-center m-3">평점 높은 영화</h1>
+            ><h1 class="text-center m-3 recommendation-small-head">
+              평점 높은 영화
+            </h1>
             <!-- 28 -->
             <b-overlay
               :show="showTopRated"
@@ -71,9 +80,14 @@
                 <br />
                 <p>{{ selectedTopRated.overview }}</p>
               </template>
-              <carousel :items="6" :autoplay="true" :autoplayHoverPause="true">
+              <carousel
+                :items="6"
+                :margin="17"
+                :autoplay="true"
+                :autoplayHoverPause="true"
+              >
                 <img
-                  class="movie-image"
+                  class="recommendation-image"
                   v-for="movie in topRated"
                   :key="movie.title"
                   :src="
@@ -86,7 +100,9 @@
         </b-row>
         <b-row>
           <b-col cols="12"
-            ><h1 class="text-center m-3">개봉 예정 영화</h1>
+            ><h1 class="text-center m-3 recommendation-small-head">
+              개봉 예정 영화
+            </h1>
             <!-- 28 -->
             <b-overlay
               :show="showUpcoming"
@@ -98,9 +114,14 @@
                 <br />
                 <p>{{ selectedUpcoming.overview }}</p>
               </template>
-              <carousel :items="6" :autoplay="true" :autoplayHoverPause="true">
+              <carousel
+                :items="6"
+                :margin="17"
+                :autoplay="true"
+                :autoplayHoverPause="true"
+              >
                 <img
-                  class="movie-image"
+                  class="recommendation-image"
                   v-for="movie in upcoming"
                   :key="movie.title"
                   :src="
@@ -110,6 +131,31 @@
                 />
               </carousel> </b-overlay
           ></b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <carousel
+              :autoplay="true"
+              :autoplayHoverPause="true"
+              :autoWidth="true"
+              :margin="15"
+            >
+              <div class="my-item">hihihihihi</div>
+              <div class="my-item2">hihihihihi</div>
+              <div class="my-item">hihihihihi</div>
+              <div class="my-item">hihihihihi</div>
+              <div class="my-item2">hihihihihi</div>
+              <div class="my-item2">hihihihihi</div>
+              <div class="my-item">hihihihihi</div>
+              <div class="my-item">hihihihihi</div>
+              <div class="my-item2">hihihihihi</div>
+              <div class="my-item2">hihihihihi</div>
+              <div class="my-item2">hihihihihi</div>
+              <div class="my-item">hihihihihi</div>
+              <div class="my-item2">hihihihihi</div>
+              <div class="my-item">hihihihihi</div>
+            </carousel>
+          </b-col>
         </b-row>
       </b-container>
     </div>
@@ -170,8 +216,6 @@ export default {
         this.popular = res.data.popular;
         this.topRated = res.data.top_rated;
         this.upcoming = res.data.upcoming;
-        console.log(this.popular);
-        console.log(this.popular[0].poster_path);
         this.isLoaded = true;
       })
       .catch((err) => {
@@ -182,6 +226,31 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+/* font-family: 'Courgette', cursive;
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+.wrapper {
+  border-width: 25px;
+  border-style: outset;
+}
+
+.box-office-head {
+  font-family: "Oswald", sans-serif;
+  font-size: 5rem;
+}
+
+.recommendation-head {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 5rem;
+}
+
+.recommendation-small-head {
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 3.5rem;
+}
+
 .movie-image {
   cursor: pointer;
   transition: all 0.2s linear;
@@ -191,7 +260,28 @@ export default {
   transform: scale(1.1);
 }
 
+.recommendation-image {
+  cursor: pointer;
+  transition: all 0.2s linear;
+  transform: scale(1.1);
+}
+
+.recommendation-image:hover {
+  transform: scale(1.2);
+}
+
 .movie-title {
   font-weight: bolder;
+}
+
+.my-item {
+  background-color: red;
+  height: 300px;
+  width: 200px;
+}
+.my-item2 {
+  background-color: red;
+  height: 300px;
+  width: 400px;
 }
 </style>
