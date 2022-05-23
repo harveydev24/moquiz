@@ -18,10 +18,10 @@ export default {
   },
   community: {
     articles: () => HOST + COMMUNITY,
-    article: articlePk => HOST + COMMUNITY + 'article' +`${articlePk}/`,
-    likeArticle: articlePk => HOST + COMMUNITY + 'article' + `${articlePk}` + 'like/',
-    comments: articlePk => HOST + COMMUNITY + `${articlePk}` + 'comments/',
-    comment: (articlePk, commentPk) => HOST +  COMMUNITY + `${articlePk}` + 'comments/' + `${commentPk}/`
+    article: articlePk => HOST + COMMUNITY + 'article/' +`${articlePk}/`,
+    likeArticle: articlePk => HOST + COMMUNITY + 'article/' + `${articlePk}/` + 'like/',
+    comments: articlePk => HOST + COMMUNITY + `${articlePk}` + '/comments/',
+    comment: (articlePk, commentPk) => HOST +  COMMUNITY + `${articlePk}` + '/comments/' + `${commentPk}/`
   },
   movie_quizzes: {
     quiz: () => HOST + MOVIE_QUIZZES + 'quiz/',

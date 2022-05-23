@@ -11,6 +11,9 @@ import ProblemView from '@/views/ProblemView.vue'
 
 import ProFileView from '@/views/ProFileView.vue'
 
+import ArticleDetailView from '@/views/ArticleDetailView.vue'
+import ArticleNewView from '@/views/ArticleNewView.vue'
+
 import LoginView from '@/views/LoginView.vue'
 import LogoutView from '@/views/LogoutView.vue'
 import SignupView from '@/views/SignupView.vue'
@@ -62,6 +65,17 @@ const routes = [
     path: '/signup',
     name: 'signup',
     component: SignupView
+  },
+  
+  {
+    path: '/article/:articlePk',
+    name: 'article',
+    component: ArticleDetailView
+  },
+  {
+    path: '/article',
+    name: 'articleNew', 
+    component: ArticleNewView
   },
 
   {

@@ -123,11 +123,6 @@ export default {
         .then(res => {
           commit('SET_PROFILE', res.data)
         }) 
-        .catch(err => {
-          console.log(err)
-          console.log(username)
-          console.log(drf.accounts.profile(username))
-        })
     },
   },
 }

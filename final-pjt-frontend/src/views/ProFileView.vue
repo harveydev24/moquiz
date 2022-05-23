@@ -1,7 +1,8 @@
 <template>
   <div>
-    <p>{{ profile.username }}</p>
-    <p>3</p>
+    <p>{{ profile.nickname }}</p>
+    <p>{{ profile }}</p>
+
   </div>
 </template>
 
@@ -20,9 +21,7 @@ export default {
   
   created() {
     const payload = { username: this.$route.params.username }
-    console.log(payload)
     this.fetchProfile(payload)
-    
   },
 }
 </script>
