@@ -8,7 +8,14 @@ class ProfileSerializer(serializers.ModelSerializer):
     followers_cnt = serializers.IntegerField(
         source='followers.count', read_only=True)
 
+    class UserSerializer(serializers.ModelSerializer):
+        class Meta:
+            model = get_user_model()
+            fields = ('id', 'nickname')
+
+    followers = UserSerializer(many=True, read_only=True)
+
     class Meta:
         model = get_user_model()
         fields = ('id', 'nickname', 'score', 'correct',
-                  'wrong', 'followings_cnt', 'followers_cnt')
+                  'wrong', 'followings_cnt', 'followers_cnt', 'followers')
