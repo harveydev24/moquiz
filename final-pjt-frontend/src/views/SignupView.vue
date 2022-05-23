@@ -1,7 +1,7 @@
 <template>
   <div class="signup-background">
     <b-container class="signup-wrapper">
-      <b-row class="row">
+      <b-row class="signup-row">
         <b-col class="text-center">
           <b-form @submit.prevent="signup(credentials)" class="signup-form">
             <h1 class="text-center">회원가입</h1>
@@ -97,7 +97,7 @@ font-family: 'Oswald', sans-serif; */
   height: 100vh;
 }
 
-.row {
+.signup-row {
   height: 100%;
 }
 
