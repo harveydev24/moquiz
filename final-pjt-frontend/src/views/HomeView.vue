@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div>
     <div
       v-if="!isLoaded"
       class="d-flex mt-5 justify-content-center align-items-center"
@@ -10,7 +10,7 @@
         class="ms-2 mb-2"
       ></b-spinner>
     </div>
-    <div v-else>
+    <div class="background" v-else>
       <h1 class="text-center p-3 boxoffice-head">
         <b>주간 박스오피스</b>
       </h1>
