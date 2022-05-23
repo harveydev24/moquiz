@@ -12,7 +12,7 @@
     </div>
     <div v-else>
       <h1 class="text-center p-3 boxoffice-head">
-        <b> Weekly Box Office </b>
+        <b>주간 박스오피스</b>
       </h1>
       <b-overlay :show="show" @click="show = !show">
         <template #overlay>

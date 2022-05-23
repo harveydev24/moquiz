@@ -10,31 +10,31 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item>
-            <router-link class="link" :to="{ name: 'home' }">Home</router-link>
+            <router-link class="link" :to="{ name: 'home' }">홈</router-link>
           </b-nav-item>
           <b-nav-item v-if="!isLoggedIn"
             ><router-link class="link" :to="{ name: 'login' }"
-              >Login</router-link
+              >로그인</router-link
             ></b-nav-item
           >
           <b-nav-item v-if="!isLoggedIn"
             ><router-link class="link" :to="{ name: 'signup' }"
-              >Signup</router-link
+              >회원가입</router-link
             ></b-nav-item
           >
           <b-nav-item v-if="isLoggedIn">
             <router-link class="link" :to="{ name: 'community' }"
-              >Community</router-link
+              >커뮤니티</router-link
             ></b-nav-item
           >
           <b-nav-item v-if="isLoggedIn">
             <router-link class="link" :to="{ name: 'ranking' }"
-              >Ranking</router-link
+              >랭킹</router-link
             ></b-nav-item
           >
           <b-nav-item v-if="isLoggedIn">
             <router-link class="link" :to="{ name: 'problem' }"
-              >Quiz</router-link
+              >퀴즈</router-link
             ></b-nav-item
           >
           <b-nav-item v-if="isLoggedIn">
@@ -42,11 +42,11 @@
               class="link"
               :to="{ name: 'profile', params: { username } }"
             >
-              {{ currentUser.username }}'s page
+              마이페이지
             </router-link></b-nav-item
           >
           <b-nav-item v-if="isLoggedIn">
-            <span class="link" @click="logout"> logout </span></b-nav-item
+            <span class="link" @click="logout"> 로그아웃 </span></b-nav-item
           >
         </b-navbar-nav>
       </b-collapse>
