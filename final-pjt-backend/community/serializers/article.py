@@ -38,6 +38,10 @@ class ArticleDetailSerializer(serializers.ModelSerializer):
 
     comments = CommentSerializer(many=True, read_only=True)
 
+    username = serializers.CharField(source='user.username')
+    
     class Meta:
         model = Article
         fields = '__all__'
+
+

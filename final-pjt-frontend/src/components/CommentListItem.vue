@@ -1,19 +1,12 @@
 <template>
   <li class="comment-list-item">
-    <router-link :to="{ name: 'profile', params: { username: comment.user.username } }">
-      {{ comment.user.username }}
-    </router-link>: 
+    <router-link :to="{ name: 'profile', params: {username: comment.username} }" >
+      {{ comment.username }}
+    </router-link>
     
     <span v-if="!isEditing">{{ payload.content }}</span>
-
-    <span v-if="isEditing">
-      <input type="text" v-model="payload.content">
-      <button @click="onUpdate">Update</button> |
-      <button @click="switchIsEditing">Cancle</button>
-    </span>
-
-    <span v-if="currentUser.username === comment.user.username && !isEditing">
-      <button @click="switchIsEditing">Edit</button> |
+    
+    <span v-if="currentUser.username === comment.username && !isEditing">
       <button @click="deleteComment(payload)">Delete</button>
     </span>
   </li>
@@ -30,7 +23,7 @@ export default {
       isEditing: false,
       payload: {
         articlePk: this.comment.article,
-        commentPk: this.comment.pk,
+        commentPk: this.comment.id,
         content: this.comment.content
       },
     }
@@ -39,12 +32,8 @@ export default {
     ...mapGetters(['currentUser']),
   },
   methods: {
-    ...mapActions(['updateComment', 'deleteComment']),
-    switchIsEditing() {
-      this.isEditing = !this.isEditing
-    },
+    ...mapActions(['deleteComment']),
     onUpdate() {
-      this.updateComment(this.payload)
       this.isEditing = false
     }
   },

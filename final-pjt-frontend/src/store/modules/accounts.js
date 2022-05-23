@@ -120,8 +120,6 @@ export default {
         })
         .catch((err) => {
           console.log(err);
-          console.log(username);
-          console.log(drf.accounts.profile(username));
         });
     },
   },
