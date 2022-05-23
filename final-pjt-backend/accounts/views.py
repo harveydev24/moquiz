@@ -43,9 +43,8 @@ def score(request):
 @api_view(['GET'])
 def profile(request, username):
     user = get_object_or_404(User, username=username)
-    if request.method == 'GET':
-        serializer = ProfileSerializer(user)
-        return Response(serializer.data, status=HTTP_200_OK)
+    serializer = ProfileSerializer(user)
+    return Response(serializer.data, status=HTTP_200_OK)
 
 
 @api_view(['PUT'])
@@ -56,4 +55,5 @@ def follow(request, pk):
         target_user.followers.remove(user)
     else:
         target_user.followers.add(user)
-    return Response(statue=HTTP_200_OK)
+    serializer = ProfileSerializer(user)
+    return Response(serializer.data, status=HTTP_200_OK)
