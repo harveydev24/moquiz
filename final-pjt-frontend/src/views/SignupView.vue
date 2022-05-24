@@ -106,7 +106,7 @@ font-family: 'Oswald', sans-serif; */
 }
 
 .signup-background {
-  background-image: url("https://assets-global.website-files.com/5e4f771ff45e4c54cb345de3/61401cbff9b93566a1e2d6b0_%2525EB%252589%2525B4%2525EC%25258A%2525A4-%2525EA%2525B7%2525B8%2525EB%2525A6%2525AC%2525EB%252593%25259C-%2525EC%25259D%2525B4%2525EB%2525AF%2525B8%2525EC%2525A7%252580-(2).png");
+  background-image: url("../assets/background_image.png");
   background-size: cover;
   overflow: hidden;
   font-family: "Do Hyeon", sans-serif;
