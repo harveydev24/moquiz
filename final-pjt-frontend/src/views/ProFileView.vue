@@ -3,6 +3,16 @@
     <b-card no-body style="width: 25rem">
       <b-card-body>
         <b-card-title class="b-card-title">{{ profile.nickname }}</b-card-title>
+        
+        <div v-if="isMe">
+          <div v-if="isFollow">
+            <button @click="followUser(profile.id)">unfollow</button> 
+          </div>
+          <div v-else>
+            <button @click="followUser(profile.id)">follow</button>
+          </div>
+        </div>
+        
         <b-card-sub-title class="mb-2 b-card-subtitle"
           >Follwings: {{ profile.followings_cnt }} Follwers:
           {{ profile.followers_cnt }}
@@ -36,10 +46,10 @@ export default {
   components: { AnimatedInteger },
 
   computed: {
-    ...mapGetters(["profile"]),
+    ...mapGetters(["profile", "isFollow", "isMe"]),
   },
   methods: {
-    ...mapActions(["fetchProfile"]),
+    ...mapActions(["fetchProfile", "followUser"]),
   },
 
   created() {
