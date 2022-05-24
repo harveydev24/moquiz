@@ -28,7 +28,17 @@ export default {
       headers: this.$store.getters.authHeader,
     })
       .then((res) => {
-        this.users = res.data;
+        let rank = 1
+        res.data.forEach((user) => {
+          let myUser = {}
+          myUser.rank = rank
+          myUser.nickname = user.nickname
+          myUser.score = user.score
+          myUser.correct = user.correct
+          myUser.wrong = user.wrong
+          this.users.push(myUser)
+          rank += 1
+        })
       })
       .catch((err) => {
         console.log(err);
