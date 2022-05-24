@@ -16,7 +16,7 @@ export default {
     articles: state => state.articles,
     article: state => state.article,
     isAuthor: (state, getters) => {
-      return state.articles.article?.user === getters.currentUser.user
+      return state.article?.user === getters.currentUser.pk
     },
     isArticle: state => !_.isEmpty(state.article),
   },
@@ -65,7 +65,6 @@ export default {
       })
         .then(res => {
           commit('SET_ARTICLE', res.data)
-          
           router.push({
             name: 'article',
             params: { articlePk: getters.article.pk }

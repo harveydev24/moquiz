@@ -15,6 +15,8 @@ export default {
 
     ranking: () => HOST + ACCOUNTS + "ranking/",
     score: () => HOST + ACCOUNTS + "score/",
+
+    follow: (userPk) => HOST + ACCOUNTS + `${userPk}/` + "follow/",
   },
   community: {
     home: () => HOST + COMMUNITY + "home/",

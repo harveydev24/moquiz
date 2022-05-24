@@ -12,6 +12,39 @@ export default {
 
   getters: {
     isLoggedIn: (state) => !!state.token,
+    
+    isFollow: (state,getters) => {
+      let check = false
+      getters.profile.followers.forEach(function(element){
+        if(element.id === state.currentUser.pk)check=true
+      })
+      return check
+
+
+    //   let check = false
+    //   getters.profile.foreach(followers => {
+    //     if(followers.id === state.currentUser.pk)check=true
+    //   })
+    //   return check
+      
+    //   arr.forEach(function(element){
+    //     console.log(element); // 0 1 2 3 4 5 6 7 8 9 10
+    // });
+      // return getters.profile.followers.includes(state.currentUser.pk)
+      // return getters.profile
+      
+      // return getters.profile
+      // return state.currentUser.pk
+      // return state.currentUser.pk  
+    },
+
+
+    isMe: (state) => {
+      return state.currentUser.username !== state.profile.nickname
+    },
+
+
+
     currentUser: (state) => state.currentUser,
     profile: (state) => state.profile,
     authError: (state) => state.authError,
@@ -121,6 +154,20 @@ export default {
         .catch((err) => {
           console.log(err);
         });
+    },
+
+    followUser({ commit, getters }, userPk) {
+      axios({
+        url: drf.accounts.follow(userPk),
+        method: 'put',
+        headers: getters.authHeader,
+      })
+      .then((res) => {
+        commit('SET_PROFILE', res.data)
+      })
+      .catch((err) => {
+        console.log(err);
+      })
     },
   },
 };
