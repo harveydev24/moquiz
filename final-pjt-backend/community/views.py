@@ -25,7 +25,7 @@ TMDB_API_KEY = '319d3b03939a4c941ec089a172df7e23'
 
 @api_view(['GET'])
 def index(request):
-    articles = Article.objects.order_by('-pk')[:10]
+    articles = Article.objects.order_by('-pk')
     serializer = ArticleSerializer(articles, many=True)
     return Response(serializer.data, status=HTTP_200_OK)
 
