@@ -1,4 +1,4 @@
-const HOST = "http://3.39.225.78/api/v1/";
+const HOST = "http://52.78.202.178/api/v1/";
 
 const ACCOUNTS = "accounts/";
 const COMMUNITY = "community/";

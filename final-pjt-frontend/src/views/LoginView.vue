@@ -88,7 +88,11 @@ font-family: 'Oswald', sans-serif; */
 }
 
 .login-background {
+<<<<<<< HEAD
   background-image: url("../assets/background_image.png");
+=======
+  background-image: url("../assets/back.png");
+>>>>>>> ac68ed549fb0abcf74c7f4b9610b6fa55203a6d6
   background-size: cover;
   overflow: hidden;
   font-family: "Do Hyeon", sans-serif;
