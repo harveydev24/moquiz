@@ -1,18 +1,16 @@
 <template>
-  <div class="d-flex justify-content-center mt-5 b-card">
-    <b-card no-body style="width: 40rem">
-      <b-card-body>
-        <b-card-title class="b-card-title">New Article</b-card-title>
-      </b-card-body>
-
-      <b-list-group flush>
-        <b-list-group-item>
-          <article-form :article="article" action="create"></article-form>
-          <router-link :to="{ name: 'community'}">back</router-link>
-        </b-list-group-item>
-      </b-list-group>
-    </b-card>
+  <div class="d-flex justify-content-center mt-5 article-new ">
+    <b-card-group deck>
+      <b-card
+        header="글작성"
+        header-tag="header"
+      >
+      <article-form :article="article" action="create"></article-form>
+      </b-card>
+    </b-card-group>
   </div>
+
+
 </template>
 
 <script>
@@ -32,17 +30,10 @@
 </script>
 
 <style>
-.b-card-title {
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+.article-new {
   font-family: "Do Hyeon", sans-serif;
-  font-size: 60px;
-}
-.b-card-subtitle {
-  font-family: "Do Hyeon", sans-serif;
-  font-size: 30px;
+  font-size: 35px;
 }
 
-.b-card {
-  font-family: "Do Hyeon", sans-serif;
-  font-size: 50px;
-}
 </style>

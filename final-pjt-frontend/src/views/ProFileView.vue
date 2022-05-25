@@ -2,20 +2,24 @@
   <div class="d-flex justify-content-center mt-5 b-card">
     <b-card no-body style="width: 25rem">
       <b-card-body>
-        <b-card-title class="b-card-title">{{ profile.nickname }}</b-card-title>
-        
         <div v-if="isMe">
           <div v-if="isFollow">
-            <button @click="followUser(profile.id)">unfollow</button> 
+            <button @click="followUser(profile.id)" class="btn btn-outline-danger" style="float:right">언팔로우</button>
           </div>
+
           <div v-else>
-            <button @click="followUser(profile.id)">follow</button>
+            <button @click="followUser(profile.id)" class="btn btn-outline-primary" style="float:right">팔로우</button>
           </div>
         </div>
-        
-        <b-card-sub-title class="mb-2 b-card-subtitle"
-          >Follwings: {{ profile.followings_cnt }} Follwers:
+        <b-card-title class="b-card-title">{{ profile.nickname }}</b-card-title>
+          
+
+
+
+        <b-card-sub-title class="mb-2 b-card-subtitle">
+          Follwings: {{ profile.followings_cnt }} Follwers:
           {{ profile.followers_cnt }}
+          
         </b-card-sub-title>
       </b-card-body>
 
