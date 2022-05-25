@@ -35,14 +35,18 @@
         </h5>
       </div>
 
-
       <b-container>
         <b-row class="h5">
-          
             <b-col>
               <b-table striped hover 
               :items=article.comments
               :fields="fields"
+
+
+              :select-mode="selectMode"
+              ref="selectableTable"
+              selectable
+              @row-selected="onRowSelected"
               >
                 <template #cell(username)="item">
                   <router-link :to="{ name: 'profile', params: {username: item.value} }" style=text-decoration:none;>
@@ -51,7 +55,6 @@
                 </template>
               </b-table>
             </b-col>
-            
         </b-row>
       </b-container>
 
@@ -86,7 +89,10 @@
           {key: 'content', label: '댓글'},
           {key: 'username', label: '작성자'},
         ],
-
+        mode: ['single'],
+        selectMode: 'single',
+        selected: [],
+        payload: [],
 
       }
     },
@@ -104,6 +110,16 @@
         'deleteComment',
       ]),
 
+      onRowSelected(item) {
+      this.selected = item
+      this.payload = {
+        articlePk: this.selected[0].article,
+        commentPk: this.selected[0].id}
+      if (this.currentUser.pk === this.selected[0].user) {
+        this.deleteComment(this.payload)
+        this.$refs.selectableTable.clearSelected()
+      }
+      },
     },
     created() {
       this.fetchArticle(this.articlePk)

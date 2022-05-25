@@ -19,32 +19,14 @@ export default {
         if(element.id === state.currentUser.pk)check=true
       })
       return check
-
-
-    //   let check = false
-    //   getters.profile.foreach(followers => {
-    //     if(followers.id === state.currentUser.pk)check=true
-    //   })
-    //   return check
-      
-    //   arr.forEach(function(element){
-    //     console.log(element); // 0 1 2 3 4 5 6 7 8 9 10
-    // });
-      // return getters.profile.followers.includes(state.currentUser.pk)
-      // return getters.profile
-      
-      // return getters.profile
-      // return state.currentUser.pk
-      // return state.currentUser.pk  
     },
 
 
     isMe: (state) => {
-      return state.currentUser.username !== state.profile.nickname
+      return state.currentUser.pk !== state.profile.id
     },
 
-
-
+    
     currentUser: (state) => state.currentUser,
     profile: (state) => state.profile,
     authError: (state) => state.authError,

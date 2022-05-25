@@ -14,8 +14,6 @@
         <b-card-title class="b-card-title">{{ profile.nickname }}</b-card-title>
           
 
-
-
         <b-card-sub-title class="mb-2 b-card-subtitle">
           Follwings: {{ profile.followings_cnt }} Follwers:
           {{ profile.followers_cnt }}
@@ -50,8 +48,9 @@ export default {
   components: { AnimatedInteger },
 
   computed: {
-    ...mapGetters(["profile", "isFollow", "isMe"]),
+    ...mapGetters(["profile", "isFollow", "isMe", "currentUser"]),
   },
+  
   methods: {
     ...mapActions(["fetchProfile", "followUser"]),
   },
