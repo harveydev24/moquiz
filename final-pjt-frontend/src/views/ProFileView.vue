@@ -60,6 +60,7 @@ export default {
   computed: {
     ...mapGetters(["profile", "isFollow", "currentUser"]),
   },
+
   methods: {
     ...mapActions(["fetchProfile", "followUser"]),
   },

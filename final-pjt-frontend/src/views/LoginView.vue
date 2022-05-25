@@ -28,7 +28,7 @@
             ></b-form-input>
 
             <div class="text-center mt-3">
-              <b-button type="submit" block variant="primary">Submit</b-button>
+              <b-button type="submit" block variant="primary">로그인</b-button>
             </div>
           </b-form>
         </b-col>
@@ -88,11 +88,7 @@ font-family: 'Oswald', sans-serif; */
 }
 
 .login-background {
-<<<<<<< HEAD
-  background-image: url("../assets/background_image.png");
-=======
   background-image: url("../assets/back.png");
->>>>>>> ac68ed549fb0abcf74c7f4b9610b6fa55203a6d6
   background-size: cover;
   overflow: hidden;
   font-family: "Do Hyeon", sans-serif;

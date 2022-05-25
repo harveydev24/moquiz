@@ -204,7 +204,6 @@
 <script>
 import axios from "axios";
 import drf from "@/api/drf";
-import router from "@/router";
 
 export default {
   name: "ProblemView",
@@ -418,8 +417,12 @@ export default {
       this.time = this.mode;
     },
     again() {
-      console.log("hi");
-      router.go();
+      this.isQuizOn = false;
+      this.isQuizLoaded = false;
+      this.isQuizOver = false;
+      this.correct = 0;
+      this.wrong = 0;
+      this.score = 0;
     },
   },
   destroyed() {
