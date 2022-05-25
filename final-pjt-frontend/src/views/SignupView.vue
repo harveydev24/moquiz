@@ -125,7 +125,7 @@ font-family: 'Oswald', sans-serif; */
   position: relative;
   top: 5%;
   margin: auto;
-  width: 20%;
+  width: 300px;
   padding: 20px;
   background-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.5);

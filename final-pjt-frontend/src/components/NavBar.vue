@@ -40,6 +40,7 @@
           <b-nav-item v-if="isLoggedIn">
             <router-link
               class="link"
+              @click.native="onClick"
               :to="{ name: 'profile', params: { username } }"
             >
               마이페이지
@@ -59,14 +60,21 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "NavBar",
+  data() {
+    return {};
+  },
   computed: {
-    ...mapGetters(["isLoggedIn", "currentUser"]),
+    ...mapGetters(["isLoggedIn", "currentUser", "profile"]),
     username() {
       return this.currentUser.username ? this.currentUser.username : "guest";
     },
   },
   methods: {
-    ...mapActions(["logout"]),
+    ...mapActions(["logout", "fetchProfile"]),
+    onClick() {
+      const payload = { username: this.username };
+      this.fetchProfile(payload);
+    },
   },
 };
 </script>
