@@ -1,9 +1,9 @@
 <template>
   <div class="comment-list">
     <ul>
-      <comment-list-item 
+      <!-- <comment-list-item 
         v-for="comment in comments" :comment="comment" :key="comment.id">
-      </comment-list-item>
+      </comment-list-item> -->
     </ul>
 
     <comment-list-form></comment-list-form>  
@@ -11,19 +11,15 @@
 </template>
 
 <script>
-import CommentListItem from '@/components/CommentListItem.vue'
+// import CommentListItem from '@/components/CommentListItem.vue'
 import CommentListForm from '@/components/CommentListForm.vue'
 
 
 export default {
   name: 'CommentList',
-  components: { CommentListForm, CommentListItem },
+  components: { CommentListForm},
   props: { comments: Array },
 }
 </script>
 
-<style>
-.comment-list {
-  border: 1px solid blue;
-}
-</style>
+<style></style>

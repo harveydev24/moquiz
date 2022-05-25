@@ -1,17 +1,21 @@
 <template>
-  <form @submit.prevent="onSubmit">
-    <div>
-      <label for="title">title: </label>
-      <input v-model="newArticle.title" type="text" id="title" />
-    </div>
-    <div>
-      <label for="content">content: </label>
-      <textarea v-model="newArticle.content" type="text" id="content"></textarea>
-    </div>
-    <div>
-      <button>{{ action }}</button>
-    </div>
-  </form>
+  <div class="article_cover">
+    <form @submit.prevent="onSubmit">
+      <div>
+        <label for="title" class="article-form-title">제목: </label>
+        <textarea id="title" cols="30" rows="1" v-model="newArticle.title" required></textarea>
+      </div>
+      <div>
+        <label for="content" class="article-form-content">내용: </label>
+        <textarea id="content" cols="30" rows="3" v-model="newArticle.content" required></textarea>
+      </div>
+      <div class="article-form-cover">
+        <router-link :to="{ name: 'community'}" style="text-decoration: none; color:black">back</router-link>
+        <button class="btn-lg btn-secondary">작성</button>
+        
+      </div>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -49,4 +53,24 @@ import { mapActions } from 'vuex'
   }
 </script>
 
-<style></style>
+<style>
+.article_cover {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+.article-form-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+}
+.article-form-content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+}
+.article-form-cover{
+  display: flex;
+  justify-content: space-between;
+}
+</style>

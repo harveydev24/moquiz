@@ -1,78 +1,59 @@
 <template>
-  <div id="app" class="col-sm-12">
-    
-    <div class="offset">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>글 번호</th>
-          <th>글 제목</th>
-          <th>작성자</th>
-        </tr>
-      </thead>
-      <tbody>
-      <tr v-for="article in lists" :key="article.id">
-        <p>{{article.id}}</p>
-        
-        <td>
-          <router-link 
-            :to="{ name: 'article', params: {articlePk: article.id} }">
-            {{ article.title }}
-          </router-link>
-        </td>
-        <td>
-          <router-link :to="{ name: 'profile', params: {username: article.username} }"> 
-          {{ article.username }}</router-link>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-    <router-link :to="{name: 'articleNew'}">글작성</router-link>
-    <b-pagination
-     :total-rows="totalRows" 
-     v-model="currentPage"
-     :per-page="perPage"/>
+  <div class="community">
+    <b-container>
+      <b-row>
+        <b-col>
+          <b-table striped hover 
+          :items=lists 
+          :fields="fields"
+          :select-mode="selectMode"
+          ref="selectableTable"
+          selectable
+          @row-selected="onRowSelected"
+          >
+          </b-table>
 
-    </div>
-    
+        </b-col>
+      </b-row>
+      
+      <div align=right >
+        <router-link :to="{name: 'articleNew'}" style="text-decoration: none; color: inherit;">글작성</router-link>
+      </div>
+
+
+      <div class="mt-3">
+        <b-pagination 
+        v-model="currentPage" 
+        :total-rows="totalRows" align="center"
+        :per-page="perPage"/>
+      </div>
+
+    </b-container>
   </div>
 
-
-  <!-- <div>
-    <h1>Community</h1>
-    <h3>
-      <router-link :to="{name: 'articleNew'}">new article</router-link>
-      
-    </h3>
-    <ul>
-      <li v-for="article in articles" :key="article.id">
-        <router-link
-          :to="{ name: 'profile', params: {username: article.username} }"> 
-          {{ article.username }}</router-link> : 
-        <router-link 
-          :to="{ name: 'article', params: {articlePk: article.id} }">
-          {{ article.title }}
-        </router-link>
-      </li>
-    </ul>
-  </div> -->
-  
 </template>
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-
   export default {
     name: 'CommunityView',
+    
     data(){
       return {
         currentPage: 1,
         perPage: 7,
+        mode: ['single'],
+        fields: [
+          {key: 'id', label: '글번호'},
+          {key: 'title', label: '글제목'},
+          {key: 'username', label: '작성자'},
+        ],
+        selectMode: 'single',
+        selected: []
       };
     },
     computed: {
       ...mapGetters(['articles']),
-
       lists () {
       const items = this.articles;
       return items.slice(
@@ -83,10 +64,14 @@
       totalRows () {
       return this.articles.length
       }
-
     },
     methods: {
       ...mapActions(['fetchArticles']),
+      onRowSelected(item) {
+      this.selected = item
+      this.$router.push({ name: 'article', params: {articlePk: this.selected[0].id} })
+      },
+
     },
     created() {
       this.fetchArticles()
@@ -94,12 +79,17 @@
     }
 </script>
 
+
+
 <style>
-.offset{
-  width: 500px !important;
-  margin: 20px auto;  
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Do+Hyeon&family=Oswald:wght@500&display=swap");
+.community {
+  font-size: 25px;
+  font-family: "Do Hyeon", sans-serif;
 }
 .myList {
   padding: 20px;
 }
+
+
 </style>

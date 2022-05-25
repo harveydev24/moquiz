@@ -1,10 +1,15 @@
 <template>
   <form @submit.prevent="onSubmit" class="comment-list-form">
-    <label for="comment">comment: </label>
-    <input type="text" id="comment" v-model="content" required>
-    <button>Comment</button>
+    <h4>
+      <label for="comment">댓글: </label>
+    </h4>
+    <textarea name="" id="comment" cols="40" rows="2" v-model="content" required></textarea><br>
+    <div align="right">
+      <button  class="btn btn-secondary">댓글달기</button>
+    </div>
   </form>
 </template>
+
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
@@ -30,9 +35,5 @@ export default {
 </script>
 
 <style>
-.comment-list-form {
-  border: 1px solid black;
-  margin: 1rem;
-  padding: 1rem;
-}
+
 </style>
