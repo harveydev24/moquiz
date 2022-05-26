@@ -12,7 +12,7 @@
 
 ## ERD
 
-![image-20220520095114312](README.assets/image-20220520095114312.png)
+![image-20220526092221741](README.assets/image-20220526092221741.png)
 
 ![image-20220520095049614](README.assets/image-20220520095049614.png)
 
@@ -139,10 +139,36 @@ node_modules 폴더를 삭제한 후 `npm i`를 이용하여 패키지를 재설
 
 ## 최종 구현
 
-### 1. 홈페이지
+### 홈페이지
+
+![image-20220526125401597](README.assets/image-20220526125401597.png)
+
+![image-20220526125416947](README.assets/image-20220526125416947.png)
 
 
 
+### 커뮤니티
+
+![image-20220526125438359](README.assets/image-20220526125438359.png)
 
 
 
+### 랭킹
+
+![image-20220526125454231](README.assets/image-20220526125454231.png)
+
+### 퀴즈
+
+![image-20220526125501445](README.assets/image-20220526125501445.png)
+
+![image-20220526125509886](README.assets/image-20220526125509886.png)
+
+![image-20220526125518471](README.assets/image-20220526125518471.png)
+
+![image-20220526125532995](README.assets/image-20220526125532995.png)
+
+![image-20220526125557031](README.assets/image-20220526125557031.png)
+
+### 마이페이지
+
+![image-20220526125607899](README.assets/image-20220526125607899.png)
