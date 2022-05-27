@@ -9,7 +9,7 @@
 - frontend
     - HTML, CSS, Javascript, Vue.js, Bootstrap
 - backend
-    - Python, Django, Django restfulframework, BeautifulSoup4, AWS
+    - Python, Django, Django RESTful Framework, BeautifulSoup4, AWS
 
 ## Structure
 
