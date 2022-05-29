@@ -20,7 +20,7 @@ User = get_user_model()
 TMDB_POPULAR_URL = 'https://api.themoviedb.org/3/movie/popular'
 TMDB_TOP_RATED_URL = 'https://api.themoviedb.org/3/movie/top_rated'
 TMDB_UPCOMING_URL = 'https://api.themoviedb.org/3/movie/upcoming'
-TMDB_API_KEY = '319d3b03939a4c941ec089a172df7e23'
+TMDB_API_KEY = {TMDB_API_KEY}
 
 
 @api_view(['GET'])
